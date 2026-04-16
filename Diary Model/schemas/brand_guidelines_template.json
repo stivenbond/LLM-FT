@@ -1,0 +1,16 @@
+{
+  "_instructions": "Fill this template for each client. This document is injected as system prompt context at inference time. The more specific, the better brand compliance scoring will be.",
+  "client_id": "client-slug",
+  "client_name": "Client Full Name",
+  "language": "sq",
+  "tone_descriptors": ["profesional", "konciz", "miqësor"],
+  "forbidden_phrases": ["shembulli i frazës së ndaluar"],
+  "preferred_phrases": ["shembulli i frazës së preferuar"],
+  "formality_level": "formal | semi-formal | informal",
+  "target_audience": "Përshkrim i audiencës target",
+  "sentence_length_preference": "short | medium | long | varied",
+  "active_voice_required": true,
+  "first_person_allowed": false,
+  "exclamation_marks_allowed": false,
+  "notes": "Çdo udhëzim shtesë specifik për markën"
+}
