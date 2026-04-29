@@ -1,10 +1,4 @@
-# Data — never commit raw articles or model weights to git
-data/seed/
-data/raw_synthetic/
-data/gold/
-data/augmented/
-data/rlhf/
-
+# TODO AFTER SUBMISSION Data — never commit raw articles or model weights to git
 # Model artifacts
 training/checkpoints/
 training/final/
