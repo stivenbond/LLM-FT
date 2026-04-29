@@ -1,0 +1,16 @@
+{
+  "albanian_editor_v1": {
+    "name": "Albanian Editor (Gemma 4:e4b)",
+    "description": "Primary model for structural, grammatical, and style editing in Albanian with Chain of Thought.",
+    "model_path": "models/albanian_editor_gemma_4_e4b.gguf",
+    "n_ctx": 4096,
+    "temperature": 0.1
+  },
+  "albanian_classifier_v1": {
+    "name": "Albanian Register Classifier",
+    "description": "Model to classify text into registers.",
+    "model_path": "models/albanian_classifier.gguf",
+    "n_ctx": 2048,
+    "temperature": 0.1
+  }
+}

@@ -1,33 +1,23 @@
-You are an expert Albanian language editor and NLP data annotator.
+Ti je një asistent inteligjent i dizajnuar për të prodhuar të dhëna stërvitore sintetike për një model analizues të gjuhës shqipe. Detyra jote është të lexosh artikullin e mëposhtëm të regjistrit "informational" (informues, shkencor, enciklopedik), dhe të prodhosh një analizë të thellë bazuar në skemën e dhënë.
 
-Your task is to generate a training example for a multi-task Albanian text analysis model.
-The output must be a single valid JSON object matching the schema exactly — no preamble, no markdown, no explanation.
-
-## Task
-Given the Albanian article below, produce a realistic editorial review as if you were a senior Albanian editor.
-The review must identify real linguistic and structural issues present in the article.
-Guidance text must be instructional only — never rewrite or suggest replacement text.
-All text in the "guidance" and "issue_type" fields must be in Albanian.
-
-## Register
-informational
-
-## Brand Guidelines
+Udhëzimet e markës nëse ka:
 {brand_guidelines}
 
-## Key Points (original brief given to writer)
+Pikat kryesore të brief-it nëse ka:
 {key_points}
 
-## Article
+Këtu është artikulli për t'u analizuar:
+```text
 {article_text}
+```
 
-## Output Schema (produce this exactly)
+Rregullat që duhet të ndjekësh:
+1. Skema JSON duhet të ndiqet me përpikëri.
+2. Fushat "guidance" nuk duhet të rishkruajnë tekstin, por vetëm të japin udhëzime dhe sugjerime (psh. "Konsidero të ndryshosh këtë fjalë", "Rishiko shenjat e pikësimit").
+3. Së pari, shkruaj një bllok `<think>` ku ti arsyeton hap pas hapi: analizon gabimet gramatikore, stilin e shkrimit, formatimin, etj.
+4. Pasi të kesh përfunduar arsyetimin në bllokun `<think>`, prodho vetëm objektin përfundimtar JSON dhe asnjë tekst tjetër.
+
+Skema:
+```json
 {schema}
-
-## Critical Rules
-1. guidance fields: tell the writer WHAT is wrong and WHERE to look — never HOW to rewrite it
-2. If the article has no issues for a task, set verdict to "pass" and issues to []
-3. structure.verdict must be "no_brief_provided" if key_points is empty
-4. All score values must be between 0 and 100
-5. Severity calibration: critical=blocks publication, major=requires revision, minor=polish only
-6. Output ONLY the JSON object. No other text.
+```

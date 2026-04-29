@@ -1,0 +1,89 @@
+{
+  "id": "alb-editorial-0001",
+  "metadata": {
+    "register": "editorial",
+    "annotator": "human",
+    "rlhf_eligible": true,
+    "version": "1.0.0",
+    "reviewer": "reviewer_name",
+    "reviewed_at": "2026-04-16"
+  },
+  "input": {
+    "brand_guidelines": "Optional brand voice guidelines or tone specifications for the article.",
+    "key_points": [
+      "First key point from the brief",
+      "Second key point from the brief",
+      "Third key point from the brief"
+    ],
+    "article_text": "Your full article text goes here. This should be at least 100 characters long. Include the complete article that needs to be analyzed and evaluated. This is the actual content that will be reviewed for grammar, style, formatting, brand compliance, marketing compliance, and structure."
+  },
+  "output": {
+    "grammar": {
+      "verdict": "pass",
+      "issues": [
+        {
+          "location": "paragraph 2, sentence 3",
+          "issue_type": "subject-verb agreement",
+          "guidance": "Check the verb tense—ensure it agrees with the subject 'article'.",
+          "severity": "minor"
+        }
+      ]
+    },
+    "writing_style": {
+      "verdict": "pass",
+      "issues": [
+        {
+          "location": "throughout",
+          "issue_type": "passive voice overuse",
+          "guidance": "Consider increasing active voice usage for more engaging prose.",
+          "severity": "minor"
+        }
+      ],
+      "detected_register": "editorial",
+      "expected_register": "editorial"
+    },
+    "formatting": {
+      "verdict": "pass",
+      "issues": []
+    },
+    "brand_compliance": {
+      "score": 95,
+      "verdict": "pass",
+      "issues": []
+    },
+    "marketing_compliance": {
+      "score": 88,
+      "verdict": "pass",
+      "issues": [
+        {
+          "location": "headline",
+          "issue_type": "weak call-to-action",
+          "guidance": "Consider adding a stronger action verb to encourage reader engagement.",
+          "severity": "major"
+        }
+      ]
+    },
+    "structure": {
+      "verdict": "pass",
+      "key_points_coverage": [
+        {
+          "key_point": "First key point from the brief",
+          "covered": true,
+          "elaboration_quality": "thorough"
+        },
+        {
+          "key_point": "Second key point from the brief",
+          "covered": true,
+          "elaboration_quality": "adequate"
+        },
+        { 
+          "key_point": "Third key point from the brief",
+          "covered": false,
+          "elaboration_quality": "missing"
+        }
+      ],
+      "structure_type_detected": "linear",
+      "guidance": "Article follows a clear linear structure with introduction, body, and conclusion."
+    }
+  }
+}

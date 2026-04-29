@@ -1,6 +1,0 @@
-"""
-validate_schema.py — See scripts/SPECS.md for full specification.
-This is a stub. Implement according to spec before running the pipeline.
-"""
-# TODO: implement per SPECS.md section for validate_schema
-raise NotImplementedError("Implement validate_schema per SPECS.md before use.")
