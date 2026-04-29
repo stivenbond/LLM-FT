@@ -7,7 +7,8 @@ def build_prompt(
     article_text: str,
     brand_guidelines: str = "",
     key_points: list = None,
-    register_hint: str = ""
+    register_hint: str = "",
+    **kwargs
 ) -> str:
     if key_points is None:
         key_points = []

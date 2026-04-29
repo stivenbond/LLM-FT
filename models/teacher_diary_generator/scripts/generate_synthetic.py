@@ -5,6 +5,12 @@ from pathlib import Path
 import time
 import logging
 import random
+from dotenv import load_dotenv
+
+# Find workspace root (up 3 levels from models/name/scripts/)
+workspace_root = Path(__file__).parent.parent.parent.parent
+load_dotenv(workspace_root / ".env")
+
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate synthetic teacher diary training examples.")

@@ -1,70 +1,71 @@
-# Albanian Analysis Model Ecosystem
+# 🇦🇱 Lahuta: Albanian LLM Ecosystem
 
-This repository contains the end-to-end data pipeline, evaluation scripts, RLHF infrastructure, and inference server for the **Albanian Analysis Model**. 
+Lahuta is a modular platform for developing, training, and serving specialized Albanian language models. It provides an end-to-end pipeline from synthetic data generation and programmatic augmentation to fine-tuning with Chain-of-Thought (CoT) and production-ready inference.
 
-This model is designed to evaluate Albanian text across four registers (editorial, informational, marketing, and classical) and score them on grammar, writing style, formatting, brand compliance, marketing compliance, and structure.
+## 🏗️ Project Architecture
 
-The data generated here is specifically formatted to train models like **Gemma 4:e4b**, featuring native support for **Chain of Thought (CoT)** reasoning traces using `<think>` blocks.
+The project is structured to support multiple specialized models within a shared infrastructure.
 
-## Project Structure
+- **`api/`**: A centralized FastAPI server that handles:
+  - Dynamic model loading from HuggingFace Hub or local storage.
+  - Multi-model state management.
+  - SSE Streaming for real-time model responses.
+  - Project-specific output validation and feedback collection (RLHF).
+- **`models/`**: Independent directories for each specialized model:
+  - `albanian_analysis/`: Structural, grammatical, and style editing.
+  - `teacher_diary_generator/`: Structured generation for educational contexts.
+- **`docs/`**: Technical specifications and architectural documentation.
 
-- `data/`: Contains seed articles, augmented data, synthetic JSON scaffolds, and final train/val/test splits.
-- `prompts/`: Albanian-language prompt templates for the data generation teacher models.
-- `schemas/`: The JSON schema (`training_example_v1.json`) defining the strict output structure.
-- `scripts/`: The core data pipeline:
-  - `validate_schema.py`: Validates and auto-fixes JSON outputs against the schema.
-  - `generate_synthetic.py`: Calls teacher models (Groq/Anthropic/OpenAI) to generate data, or scaffolds empty JSONs for manual chat interfaces.
-  - `augment.py`: Programmatically expands the dataset via error injection, register swaps, etc.
-  - `split_dataset.py`: Generates stratified data splits for training.
-  - `build_prompt.py`: Assembles the exact Gemma prompt format, including CoT instructions, and parses outputs.
-  - `run_pipeline.py`: A master script that orchestrates the entire data pipeline.
-- `inference/`: FastAPI server for production deployment.
-  - `server.py`: Supports SSE streaming, multi-model loading from `models_config.json`, and API key auth.
-  - `output_validator.py`: A safety net that fuzzy-matches and repairs malformed model outputs before they reach the client.
-- `evals/`: Scripts to calculate per-task metrics (MAE, KL Divergence, etc.) against a test set.
-- `rlhf/`: Pipeline for collecting user feedback and compiling Direct Preference Optimization (DPO) pairs.
-- `tests/`: Pytest suite for core pipeline logic.
+## 🛠️ Getting Started
 
-## Getting Started
+### 1. Prerequisites
+- Python 3.10+
+- `llama-cpp-python` (with hardware acceleration for local inference)
+- API Keys for teacher models (Groq, Anthropic, or OpenAI)
 
-1. **Install Dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *Note: If you plan to run the inference server, ensure you have `llama-cpp-python` installed, potentially with hardware acceleration enabled (e.g., cuBLAS or Metal).*
-
-2. **Configure Environment**
-   Copy `.env.example` to `.env` and populate your API keys:
-   ```bash
-   cp .env.example .env
-   # Edit .env with your keys
-   ```
-
-## Running the Data Pipeline
-
-You can run the entire data pipeline (Validation → Augmentation → Splitting) in one go:
+### 2. Installation
 ```bash
-python scripts/run_pipeline.py
+pip install -r requirements.txt
 ```
 
-Alternatively, you can open `Pipeline.ipynb` in Google Colab or Jupyter to run the steps interactively.
-
-## Running the Inference Server
-
-The server requires a downloaded GGUF model. Update `ALBANIAN_EDITOR_MODEL_PATH` in your `.env` file, then run:
+### 3. Configuration
+Copy `.env.example` to `.env` and fill in your credentials:
 ```bash
-uvicorn inference.server:app --host 0.0.0.0 --port 8000
+cp .env.example .env
 ```
 
-### Server Endpoints
-- `POST /analyze`: Submit an article for analysis. Supports SSE streaming if `"stream": true` is passed in the JSON body. Requires `x-api-key` header.
-- `POST /feedback`: Submit negative user feedback from your frontend/PWA for future RLHF training.
-- `GET /health`: Check server status and loaded models.
-- `GET /schema`: Returns the JSON schema expected from the model.
+## 🚀 Serving Models
 
-## Running Tests
+The Lahuta API dynamically loads models based on `api/models_config.json`.
 
-To verify the core components:
 ```bash
-pytest tests/
+# Run the server
+uvicorn api.server:app --host 0.0.0.0 --port 8000 --reload
 ```
+
+### Key Endpoints:
+- `POST /analyze`: Main inference endpoint. Supports `"stream": true`.
+- `POST /models/load`: Load a new model or update configuration at runtime.
+- `GET /health`: Monitor loaded models and server uptime.
+- `POST /feedback`: Collect user corrections for future DPO/RLHF training.
+
+## 📊 Data Pipeline
+
+Each model in `models/` contains its own data pipeline scripts:
+
+1. **Generation**: `generate_synthetic.py` creates high-quality JSON scaffolds.
+2. **Augmentation**: `augment.py` programmatically expands the dataset.
+3. **Validation**: `validate_schema.py` ensures strict adherence to training schemas.
+4. **Splitting**: `split_dataset.py` creates stratified train/val/test splits.
+
+To run the pipeline for a specific model:
+```bash
+python models/albanian_analysis/scripts/run_pipeline.py
+```
+
+## 🧠 Training
+
+Lahuta models are optimized for **Gemma 4:e4b** using Chain-of-Thought (CoT) reasoning traces. Training scripts and configurations are located in each model's `training/` directory.
+
+---
+*Lahuta - Empowering the Albanian language through advanced AI.*

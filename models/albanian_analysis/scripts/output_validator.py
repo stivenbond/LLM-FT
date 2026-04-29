@@ -17,8 +17,12 @@ def fuzzy_match_verdict(raw_verdict: str) -> str:
         return matches[0]
     return "fail"
 
-def validate_and_repair(raw: dict, key_points_empty: bool = False) -> tuple[dict, list[str]]:
+def validate_and_repair(raw: dict, **kwargs) -> tuple[dict, list[str]]:
     repairs = []
+    
+    # Check if key_points were provided in the request
+    key_points = kwargs.get("key_points", [])
+    key_points_empty = not key_points
     
     # 1. Missing task key -> empty scaffold
     tasks = {

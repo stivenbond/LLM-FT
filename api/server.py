@@ -14,9 +14,9 @@ from dotenv import load_dotenv
 from huggingface_hub import hf_hub_download
 
 # Load environment variables
-load_dotenv()
-
 repo_root = Path(__file__).parent.parent
+load_dotenv(repo_root / ".env")
+
 app = FastAPI(title="Lahuta Model Ecosystem API")
 
 # Security
@@ -40,11 +40,16 @@ class ModelState:
 
 class AnalyzeRequest(BaseModel):
     model_id: str = "albanian_analysis"
-    article_text: str = Field(..., min_length=100)
-    brand_guidelines: str = ""
-    key_points: List[str] = []
-    client_id: Optional[str] = None
     stream: bool = False
+    # Allow any other fields for model-specific inputs
+    model_config = {"extra": "allow"}
+
+    def get_model_inputs(self) -> Dict[str, Any]:
+        """Returns all fields except the infrastructure ones."""
+        data = self.model_dump()
+        data.pop("model_id", None)
+        data.pop("stream", None)
+        return data
 
 class LoadModelRequest(BaseModel):
     model_id: str
@@ -234,11 +239,13 @@ async def analyze(req: AnalyzeRequest, api_key: str = Depends(get_api_key)):
     if not build_prompt_fn:
         raise HTTPException(status_code=500, detail=f"Processor 'build_prompt' missing for {model_id}")
     
-    prompt = build_prompt_fn(
-        article_text=req.article_text,
-        brand_guidelines=req.brand_guidelines,
-        key_points=req.key_points
-    )
+    inputs = req.get_model_inputs()
+    
+    try:
+        prompt = build_prompt_fn(**inputs)
+    except TypeError as e:
+        # Fallback for older processors that don't support **kwargs
+        raise HTTPException(status_code=500, detail=f"Processor 'build_prompt' signature mismatch: {e}")
     
     ModelState.last_inference[model_id] = time.time()
     temperature = cfg.get("temperature", 0.1)
@@ -268,7 +275,7 @@ async def analyze(req: AnalyzeRequest, api_key: str = Depends(get_api_key)):
             
         validate_fn = proc.get("validate_and_repair")
         if validate_fn:
-            repaired, _ = validate_fn(parsed, key_points_empty=not req.key_points)
+            repaired, _ = validate_fn(parsed, **inputs)
             return repaired
         return parsed
 

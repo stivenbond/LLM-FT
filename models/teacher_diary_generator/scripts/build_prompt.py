@@ -3,10 +3,11 @@ import re
 from pathlib import Path
 
 def build_prompt(
-    context_data: dict,
-    target_fields: list,
-    language: str = "sq", # Defaulting to Albanian since the platform seems Albanian-centric, but easily swappable
-    additional_instructions: str = ""
+    context_data: dict = None,
+    target_fields: list = None,
+    language: str = "sq", 
+    additional_instructions: str = "",
+    **kwargs
 ) -> str:
     """
     Builds a prompt for the Teacher Diary Generator.
@@ -18,6 +19,11 @@ def build_prompt(
         additional_instructions: Any extra constraints.
     """
     
+    if context_data is None:
+        context_data = {}
+    if target_fields is None:
+        target_fields = ["Summary"]
+        
     fields_str = "\n".join([f"- {field}" for field in target_fields])
     context_str = json.dumps(context_data, indent=2, ensure_ascii=False)
 

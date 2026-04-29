@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 
 repo_root = Path(__file__).parent.parent
-sys.path.append(str(repo_root / "inference"))
+sys.path.append(str(repo_root / "scripts"))
 from output_validator import validate_and_repair, fuzzy_match_verdict
 
 def test_fuzzy_match_verdict():
@@ -51,5 +51,5 @@ def test_validate_and_repair_structure_verdict():
     }
     
     # Simulating empty key_points in input
-    repaired, modifications = validate_and_repair(raw, key_points_empty=True)
+    repaired, modifications = validate_and_repair(raw, key_points=[])
     assert repaired["structure"]["verdict"] == "no_brief_provided"
