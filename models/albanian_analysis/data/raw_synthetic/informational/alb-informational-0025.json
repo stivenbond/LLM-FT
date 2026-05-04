@@ -14,6 +14,35 @@
     "article_text": "Ndeshje miqësore me gjimnazin “Sami Frashëri” Në një atmosferë plot energji dhe entuziazëm, “Harry Fultz” mirëpriti gjimnazin “Sami Frashëri” për ndeshje miqësore në volejboll për vajza dhe basketboll për djem. Kjo veprimtari, pjesë e kalendarit të rregullt sportiv të shkollës, dëshmoi edhe një herë frymën e bashkëpunimit dhe respektit që karakterizon garat mes shkollave të Tiranës. Lojërat u zhvilluan me ritëm të lartë dhe me shumë pasion, ku çdo ekip tregoi jo vetëm talent dhe teknikë, por edhe shpirt sportiv të admirueshëm. Përtej rezultatit, fitorja më e madhe ishte ajo e miqësisë dhe e frymës së “fair play”-t, vlera që “Harry Fultz” i ka ruajtur dhe përcjellë brez pas brezi. Tradita sportive e shkollës mbetet një nga shtyllat që forcon komunitetin e \"Fultz\", duke nxitur te të rinjtë dashurinë për sportin, disiplinën dhe punën në grup. Ndeshjet si kjo rikujtojnë se në “Fultz”, sporti është më shumë se lojë, por është kulturë, bashkim dhe identitet."
   },
   "output": {
-    "_instruction": "FILL IN MANUALLY ACCORDING TO SCHEMA"
+    "grammar": {
+      "verdict": "partial",
+      "issues": []
+    },
+    "writing_style": {
+      "verdict": "partial",
+      "issues": [],
+      "detected_register": "informational",
+      "expected_register": "unspecified"
+    },
+    "formatting": {
+      "verdict": "pass",
+      "issues": []
+    },
+    "brand_compliance": {
+      "score": 50,
+      "verdict": "partial",
+      "issues": []
+    },
+    "marketing_compliance": {
+      "score": 50,
+      "verdict": "partial",
+      "issues": []
+    },
+    "structure": {
+      "verdict": "no_brief_provided",
+      "key_points_coverage": [],
+      "structure_type_detected": "unclear",
+      "guidance": "No brief was provided, so structure assessment should focus on coherence and flow."
+    }
   }
 }
