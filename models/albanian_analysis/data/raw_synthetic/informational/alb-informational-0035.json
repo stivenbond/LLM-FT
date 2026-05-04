@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Nxënësit e Muajit Në shkollën tonë, përsosmëria nuk është thjesht një qëllim, por një standard që lartësohet çdo ditë përmes punës dhe talentit të nxënësve.",
+      "Me dëshirën për të vlerësuar jo vetëm arritjet akademike, por edhe integritetin, lidershipin dhe përkushtimin profesional, kemi kënaqësinë të prezantojmë iniciativën më të re: “Nxënësit e Muajit”.",
+      "Ky vlerësim vjen si një mirënjohje për ata të rinj që shkojnë përtej detyrimeve shkollore, duke u shndërruar në model frymëzimi për bashkëmoshatarët e tyre."
+    ],
     "article_text": "Nxënësit e Muajit Në shkollën tonë, përsosmëria nuk është thjesht një qëllim, por një standard që lartësohet çdo ditë përmes punës dhe talentit të nxënësve. Me dëshirën për të vlerësuar jo vetëm arritjet akademike, por edhe integritetin, lidershipin dhe përkushtimin profesional, kemi kënaqësinë të prezantojmë iniciativën më të re: “Nxënësit e Muajit”. Ky vlerësim vjen si një mirënjohje për ata të rinj që shkojnë përtej detyrimeve shkollore, duke u shndërruar në model frymëzimi për bashkëmoshatarët e tyre. Përzgjedhja e këtij muaji reflekton diversitetin e profileve tona studimore, duke dëshmuar se suksesi në \"Harry Fultz\" ka shumë forma, por një emërues të përbashkët: pasionin për t’u rritur. Më poshtë, ju ftojmë të njihni protagonistët e këtij muaji, të cilët me rezultatet dhe angazhimin e tyre po lënë gjurmë në komunitetin tonë: Rea Hylli Rea Hylli është një nxënëse e vitit të dytë në Shkollën e Mesme të Përgjithshme, e cila shquhet për rezultate të shkëlqyera dhe motivim të lartë. Ajo demonstron performancë të jashtëzakonshme në lëndët shkencore, ku mendimi i saj analitik dhe kurioziteti dallohen dukshëm. Përtej anës akademike, Rea njihet si një debatuese e sigurt dhe e artikuluar, e aftë të shprehur idetë e saj në mënyrë të qartë dhe bindëse. Një nga arritjet e saj më të rëndësishme është sjellja për herë të parë e konferencës Model United Nations (MUN) në shkollën tonë, të cilën ajo e organizoi dhe e koordinoi me sukses. Përmes lidershipit, iniciativës dhe përkushtimit, Rea ka lënë një ndikim të qëndrueshëm në komunitetin shkollor. Emanuel Dervishi Emanuel Dervishi është një nxënës i vitit të tretë në drejtimin Elektronikë-IT dhe njihet gjerësisht si një nga programuesit më të talentuar në shkollë. Pasioni i tij për programimin dhe zgjidhjen e problemeve reflektohet në rezultatet e shkëlqyera mësimore dhe në aftësitë e tij të avancuara teknike. Aftësitë e Emanuelit shtrihen edhe jashtë klasës, siç dëshmohet nga fitimi i vendit të tretë në Maratonën Kombëtare të Sigurisë Kibernetike, një veprimtari mjaft konkurrues. Angazhimi i tij ndaj teknologjisë dhe përmirësimi i vazhdueshëm e bëjnë Emanuelin një shembull frymëzues për nxënësit e interesuar në fushat e IT-së dhe inxhinierisë. Filip Pojani Filip Pojani është një nxënës i vitit të tretë në drejtimin Administrim Biznesi, i cili demonstron vazhdimisht përsosmëri në ekonomi, financë dhe kontabilitet. Ai tregon një kuptim të fortë si të koncepteve teorike, ashtu edhe të zbatimeve praktike, duke u dalluar si një nxënës i përgjegjshëm dhe i angazhuar. Filipi merr pjesë aktive në projekte të ndryshme shkollore, ku kontribuon me seriozitet, punë në grup dhe ide të strukturuara mirë. Mendësia e tij e organizuar, etika e fortë e punës dhe gatishmëria për bashkëpunim e bëjnë atë një anëtar të vlefshëm në çdo grup. Me përkushtimin dhe qëndrimin pozitiv, Filipi përfaqëson cilësitë e një profesionisti të ardhshëm në fushën e biznesit dhe menaxhimit. Petro Proko Petro Proko është një nxënës i vitit të tretë në drejtimin Automekanikë, i cili ka treguar aftësi të forta dhe njohuri në rritje në lëndët teknike dhe inxhinierike. Ai dallohet veçanërisht për aftësitë praktike, kuptimin teknik dhe qasjen konkrete ndaj të nxënit. Petro punon me përkushtim si në klasë ashtu edhe gjatë praktikës profesionale, duke treguar përgjegjësi, disiplinë dhe përqendrim. Ai njihet si një nxënës bashkëpunues dhe i besueshëm, gjithmonë i gatshëm për të mësuar dhe për të përmirësuar aftësitë e tij. Me përkushtimin ndaj arsimit profesional dhe përparimit të vazhdueshëm, Petro pasqyron vlerat e mjeshtërisë, këmbënguljes dhe profesionalizmit."
   },
   "output": {

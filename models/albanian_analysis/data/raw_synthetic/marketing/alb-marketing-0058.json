@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Inovacioni në Lëvizje: “Festivali i Shkencës 2026” Në Institutin \"Harry Fultz\", aty ku muret dëshmojnë një traditë mbi 100-vjeçare të edukimit teknik, energjia e inovacionit aktualisht gjendet në kulmin e saj.",
+      "Ky vit shënon një gur themeli të ri me organizimin e \"Festivalit të Shkencës 2026\", një veprimtari që po shpaloset si një manifestim i gjallë i bashkëpunimit ndërdisiplinor dhe mendimit kritik.",
+      "Për momentin, laboratorët dhe klasat tona janë shndërruar në qendra kërkimore të ethshme."
+    ],
     "article_text": "Inovacioni në Lëvizje: “Festivali i Shkencës 2026” Në Institutin \"Harry Fultz\", aty ku muret dëshmojnë një traditë mbi 100-vjeçare të edukimit teknik, energjia e inovacionit aktualisht gjendet në kulmin e saj. Ky vit shënon një gur themeli të ri me organizimin e \"Festivalit të Shkencës 2026\", një veprimtari që po shpaloset si një manifestim i gjallë i bashkëpunimit ndërdisiplinor dhe mendimit kritik. Për momentin, laboratorët dhe klasat tona janë shndërruar në qendra kërkimore të ethshme. Atmosfera është unike; nxënësit e elektronikës dhe robotikës janë të zhytur në skemat e tyre, duke bashkuar forcat me nxënësit e degëve të tjera për të zgjidhur sfidat komplekse të projekteve. Ky ndërveprim bazohet në parimin e sinergjisë inxhinierike: koncepti ku vlera e kombinuar e dy fushave të ndryshme prodhon një zgjidhje që asnjëra nuk do ta arrinte dot e vetme. Aktualisht, projektet po kalojnë nga faza e skicave teorike drejt prototipeve funksionale. Ky është momenti më kritik i zhvillimit, ku nxënësit mësojnë të jenë arkitektë të teknologjisë dhe jo thjesht konsumatorë. Menaxhimi i kohës, ndarja e përgjegjësive dhe zgjidhja e problemeve në kohë reale (troubleshooting) po ndërtojnë karakterin e një brezi që guxon të krijojë nën presion. Edhe pse dita finale e prezantimit po afrohet, puna që po bëhet në këto momente është ajo që përcakton suksesin. Jemi dëshmitarë të krijimit të sistemeve të automatizuara të energjisë dhe aplikacioneve inovative për menaxhimin e të dhënave që synojnë zgjidhjen e problemeve reale. Çdo stendë që po përgatitet është një histori përkushtimi në zhvillim e sipër. Përgatitjet nuk kufizohen vetëm në anën teknike. Nxënësit po rafinojnë aftësitë e tyre prezantuese, duke u ushtruar për mbrojtjen e argumentit shkencor dhe demonstrimin e prototipeve përpara jurisë. Kjo \"provë gjenerale\" po shërben si një urë lidhëse drejt sfidave që i presin në universitetet ndërkombëtare dhe industrinë globale. Etheve të garës u shtohet entuziazmi i pritjes. Megjithëse fituesit nuk janë shpallur ende, konsolidimi i ndjenjës së përkatësisë dhe etika e punës në grup janë fitoret tona të para. \"Festivali i Shkencës 2026\" po dëshmon se kur bashkëpunimi dhe angazhimi bëhen njësh, shkenca bëhet mjeti më i fuqishëm për të ndërtuar të ardhmen."
   },
   "output": {

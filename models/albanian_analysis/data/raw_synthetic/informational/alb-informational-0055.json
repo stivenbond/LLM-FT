@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Orë kreative \"Web Design\" Principet e Web Design është një lëndë bashkëkohore dhe inovative që studiohet nga nxënësit e degës gjimnaz i përgjithshëm gjatë vitit të dytë të studimeve në shkollën \"Harry Fultz\".",
+      "Ky modul ofrohet si një mundësi shtesë nga shkolla dhe nuk është pjesë e kurrikulës zyrtare shtetërore, çka e bën atë një përvojë të veçantë dhe të specializuar të të nxënit për nxënësit e interesuar në teknologji dhe kreativitet digjital.",
+      "Përmes kësaj lënde, nxënësit njihen me bazat e krijimit dhe zhvillimit të faqeve të internetit, duke punuar praktikisht me gjuhë programimi si HTML, CSS dhe JavaScript."
+    ],
     "article_text": "Orë kreative \"Web Design\" Principet e Web Design është një lëndë bashkëkohore dhe inovative që studiohet nga nxënësit e degës gjimnaz i përgjithshëm gjatë vitit të dytë të studimeve në shkollën \"Harry Fultz\". Ky modul ofrohet si një mundësi shtesë nga shkolla dhe nuk është pjesë e kurrikulës zyrtare shtetërore, çka e bën atë një përvojë të veçantë dhe të specializuar të të nxënit për nxënësit e interesuar në teknologji dhe kreativitet digjital. Përmes kësaj lënde, nxënësit njihen me bazat e krijimit dhe zhvillimit të faqeve të internetit, duke punuar praktikisht me gjuhë programimi si HTML, CSS dhe JavaScript. Këto njohuri u mundësojnë atyre të ndërtojnë faqe interneti funksionale, të strukturuara mirë dhe nga ana pamore, më tërheqëse. Mësimi nuk mbetet vetëm në teori, por fokusohet kryesisht në praktikë, ku nxënësit zhvillojnë projekte reale dhe shohin drejtpërdrejt rezultatet e punës së tyre. Nxënësit mësojnë rreth paraqitjes së përmbajtjes, teorisë së ngjyrave, tipografisë, balancës vizuale dhe mënyrës se si një faqe interneti duhet të jetë e qartë, e natyrshme dhe interesante për syrin e përdoruesit. Këto njohuri janë thelbësore për krijimin e përmbajtjes digjitale cilësore dhe profesionale. Lënda \"Principet e Web Design\" inkurajon krijimtarinë, të menduarit kritik dhe logjik, si dhe aftësinë për zgjidhjen e problemeve. Nxënësit mësojnë të analizojnë nevojat e një projekti, të planifikojnë strukturën e një faqeje dhe të bashkojnë anën teknike me atë estetike. Kjo i ndihmon ata të zhvillojnë aftësi praktike digjitale, të cilat janë gjithnjë e më të kërkuara në tregun e punës dhe në arsimin e lartë. Duke kombinuar njohuritë teknike me parimet bazë të dizajnit dhe komunikimit digjital, kjo lëndë u ofron nxënësve një bazë të fortë në zhvillimin e faqeve të internetit dhe i përgatit ata për sfidat e botës moderne, të drejtuara nga teknologjia. Principet e Web Design nuk është thjesht një lëndë mësimore, por një hap i rëndësishëm drejt zhvillimit profesional dhe kreativ të nxënësve."
   },
   "output": {

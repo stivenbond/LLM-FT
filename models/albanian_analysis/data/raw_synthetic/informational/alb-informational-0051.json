@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Takim kampionësh Një traditë që bashkon brezat: Ndeshja e basketbollit mes ish-nxënësve dhe nxënësve aktualë Çdo vit, departamenti i edukimit fizik në shkollën “Harry Fultz” ruan me krenari një traditë të veçantë që shkon përtej sportit.",
+      "Ish-nxënësit rikthehen në mjediset e shkollës për të luajtur një ndeshje basketbolli përballë nxënësve aktualë, duke krijuar një moment të rrallë bashkimi mes brezave që kanë kaluar në të njëjtat korridore dhe klasa.",
+      "Kjo ndeshje nuk është thjesht një përballje sportive, por një festë e kujtimeve, miqësisë dhe përkatësisë."
+    ],
     "article_text": "Takim kampionësh Një traditë që bashkon brezat: Ndeshja e basketbollit mes ish-nxënësve dhe nxënësve aktualë Çdo vit, departamenti i edukimit fizik në shkollën “Harry Fultz” ruan me krenari një traditë të veçantë që shkon përtej sportit. Ish-nxënësit rikthehen në mjediset e shkollës për të luajtur një ndeshje basketbolli përballë nxënësve aktualë, duke krijuar një moment të rrallë bashkimi mes brezave që kanë kaluar në të njëjtat korridore dhe klasa. Kjo ndeshje nuk është thjesht një përballje sportive, por një festë e kujtimeve, miqësisë dhe përkatësisë. Për ish-nxënësit, është një mundësi për të rikthyer emocionet e viteve të shkollës, për të takuar mësues dhe për të parë se si institucioni vazhdon të rritet. Për nxënësit aktualë, është një përvojë frymëzuese, ku ata shohin se lidhja me shkollën nuk përfundon me diplomimin. Rezultati i ndeshjes nuk ka rëndësi. Ajo që mbetet është energjia pozitive, respekti i ndërsjellë dhe ndjenja e fortë e komunitetit. Në çdo pasim, në çdo buzëqeshje dhe në çdo duartrokitje, reflektohet një lidhje që nuk zbehet me kohën. Kjo traditë është një dëshmi e vlerave që “Harry Fultz” kultivon — bashkëpunim dhe respekt. Është një kujtesë se shkolla nuk është vetëm një vend ku mësojmë, por një komunitet që mbetet gjithmonë pjesë e jetës sonë."
   },
   "output": {

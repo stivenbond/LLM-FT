@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Rrjetëzimi (Networking): Si të kthesh një bisedë në mundësi biznesi.",
+      "Në botën e biznesit, shpesh thuhet se “ideja është e rëndësishme, por rrjeti i kontakteve është vendimtar”.",
+      "Shumë të rinj mendojnë se lidhjet me investitorë krijohen vetëm pas universitetit apo kur biznesi është tashmë i konsoliduar."
+    ],
     "article_text": "Rrjetëzimi (Networking): Si të kthesh një bisedë në mundësi biznesi. Në botën e biznesit, shpesh thuhet se “ideja është e rëndësishme, por rrjeti i kontakteve është vendimtar”. Shumë të rinj mendojnë se lidhjet me investitorë krijohen vetëm pas universitetit apo kur biznesi është tashmë i konsoliduar. Në fakt, rrugëtimi mund të nisë shumë më herët.që në bankat e shkollës. Si nxënëse e degës së biznesit, kam kuptuar se rrjetëzimi nuk është thjesht shkëmbim kartëvizitash. Ai është ndërtim marrëdhëniesh, komunikim i qartë i ideve dhe krijim besimi. Shkolla jonë, përmes praktikës dhe projekteve, na jep mundësinë të hedhim hapat e parë drejt këtij procesi. Çfarë është rrjetëzimi dhe pse është i rëndësishëm? Rrjetëzimi (networking) është procesi i krijimit dhe zhvillimit të marrëdhënieve profesionale që mund të kontribuojnë në rritjen personale dhe në zhvillimin e një biznesi. Për një startup, kontaktet janë po aq të rëndësishme sa kapitali fillestar. Një ide e mirë ka nevojë për: • këshillim profesional, • mbështetje financiare, • orientim strategjik, • promovim dhe besueshmëri. Të gjitha këto mund të vijnë përmes rrjetit të duhur të kontakteve. Si fillon rrjetëzimi që në shkollë? Shumë mund të mendojnë se nxënësit nuk kanë akses tek investitorët. Por në realitet, mundësitë janë më të afërta se sa duken. 1. Pjesëmarrja në veprimtaritë dhe panaire shkollore Prezantimet e projekteve, konkurset e biznesit apo panairet janë momente ideale për të treguar idenë përpara mësuesve, prindërve, bizneseve lokale apo të ftuarve specialë. 2. Praktika profesionale Gjatë praktikës, ne kemi mundësi të takojmë sipërmarrës, menaxherë apo profesionistë të fushës. Një komunikim i mirë, serioziteti dhe përgatitja mund të lënë një përshtypje që hap dyer në të ardhmen. 3. Rrjetet sociale profesionale Krijimi i një profili serioz në platforma profesionale dhe ndarja e projekteve tona tregon seriozitet dhe pasion. Edhe një postim i strukturuar mirë për një ide biznesi mund të tërheqë vëmendjen e duhur. 4. Komunikimi i qartë i idesë (Elevator Pitch) Pothuajse në çdo lënde kemi mësuar të prezantojmë idetë tona në mënyrë të përmbledhur dhe bindëse. Një prezantim 1–2 minutësh që shpjegon problemin, zgjidhjen dhe potencialin e tregut është një aftësi thelbësore kur takon dikë që mund të bëhet investitor. Çfarë kërkojnë investitorët? Investitorët nuk kërkojnë vetëm ide të mira. Ata kërkojnë: • seriozitet dhe përgatitje, • plan të qartë biznesi, • kuptim të tregut, • pasion dhe përkushtim, • aftësi për të pranuar këshilla dhe për të përmirësuar idenë. Në këtë pikë, formimi që marrim në shkollë bëhet një përparësi e madhe. Njohuritë mbi planin e biznesit, analizën financiare dhe marketingun na bëjnë më të sigurt dhe më profesionalë në komunikim. Sfidat e para Sigurisht, rrjetëzimi nuk është i lehtë. Ka pasiguri, ndonjëherë refuzim, apo mungesë përgjigjeje. Por çdo takim është një përvojë mësimi. Çdo prezantim na ndihmon të përmirësojmë mënyrën si shprehim idenë tonë. Shpesh, investimi i parë që marrim nuk është financiar,është një këshillë e vlefshme, një kontakt i ri apo një sugjerim për përmirësim. Këto janë po aq të rëndësishme sa kapitali. Rrjetëzimi si investim në veten tonë Në fund, rrjetëzimi nuk ka të bëjë vetëm me gjetjen e investitorëve. Ka të bëjë me ndërtimin e identitetit tonë profesional që në moshë të re. Ai na mëson të komunikojmë me siguri, të prezantojmë idetë tona me argumente dhe të ndërtojmë marrëdhënie të bazuara në respekt dhe besim. Nëse sipërmarrja fillon me një ide, atëherë suksesi fillon me njerëzit e duhur. Dhe krijimi i këtyre kontakteve mund të nisë që sot – nga bankat e shkollës. Sepse e ardhmja e biznesit nuk ndërtohet vetëm me kapital, por me guxim për të trokitur në derën e parë."
   },
   "output": {

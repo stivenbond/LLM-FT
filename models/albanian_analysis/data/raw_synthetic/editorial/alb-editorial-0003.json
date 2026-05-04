@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Ndikimi i Edukimit Fizik në Shëndetin Mendor të Studentëve Ulja e stresit dhe ankthit Studimet kanë treguar se ushtrimet fizike ndih- mojnë në uljen e niveleve të stresit dhe ankthit.",
+      "Gjatë aktivitetit fizik, trupi liron endorfina, të njo- hura si \"hormonet e lumturisë\", të cilat ndihmo- jnë në përmirësimin e humorit dhe reduktimin e ndjenjave negative.",
+      "Për studentët, të cilët për- ballen me afate kohore të ngarkuara dhe presione akademike, aktiviteti fizik mund të jetë një strategji efektive për menaxhimin e stresit."
+    ],
     "article_text": "Ndikimi i Edukimit Fizik në Shëndetin Mendor të Studentëve Ulja e stresit dhe ankthit Studimet kanë treguar se ushtrimet fizike ndih- mojnë në uljen e niveleve të stresit dhe ankthit. Gjatë aktivitetit fizik, trupi liron endorfina, të njo- hura si \"hormonet e lumturisë\", të cilat ndihmo- jnë në përmirësimin e humorit dhe reduktimin e ndjenjave negative. Për studentët, të cilët për- ballen me afate kohore të ngarkuara dhe presione akademike, aktiviteti fizik mund të jetë një strategji efektive për menaxhimin e stresit. Rritja e vetëbesimit dhe përmirësimi i humorit Aktiviteti fizik ndikon drejtpërdrejt në percepti- min që një student ka për veten. Pjesëmarrja në sporte ose ushtrime të ndryshme ndihmon në ndërtimin e vetëbesimit, pasi studentët ndihen më të fortë, më të aftë dhe më të sigurt në veten e tyre. Përveç kësaj, përmirësimi i humorit pas stërvitjes është një efekt i menjëhershëm që ndih- mon në reduktimin e depresionit, një problem i zakonshëm tek studentët e universiteteve. Përmirësimi i përqendrimit dhe performancës akademike Një tjetër përfitim i rëndësishëm i edukimit fizik është ndikimi i tij pozitiv në përqendrimin dhe aftësitë kognitive. Aktiviteti fizik përmirëson qarkullimin e gjakut në tru, duke ndihmuar në përmirësimin e kujtesës dhe funksioneve ekzeku- tive. Kjo është veçanërisht e rëndësishme për stu- dentët, të cilët përballen me kërkesa të larta akademike dhe kanë nevojë për një mendje të shëndetshme për të arritur suksesin e dëshiruar. Ndikimi social dhe ndërtimi i marrëdhënieve pozitive Pjesëmarrja në aktivitete sportive dhe fizike pro- movon ndërveprimin social dhe ndihmon në kri- jimin e marrëdhënieve të forta midis studentëve. Ky aspekt është veçanërisht i rëndësishëm për ata që mund të ndihen të izoluar ose të vetmuar në mjedisin universitar. Lojërat dhe sportet ekipore i mësojnë studentët të punojnë së bashku, të re- spektojnë rregullat dhe të zhvillojnë ndjenjën e përkatësisë. Edukimi fizik nuk është thjesht një orë mësimore në shkollë apo universitet, por një investim në shëndetin mendor dhe mirëqenien e përgjithshme të studentëve. Duke inkurajuar një stil jetese aktiv, ne jo vetëm që forcojmë trupin, por edhe ndërtojmë një mendje të shëndetshme, të ekuilibruar dhe të aftë për të përballuar sfidat akademike dhe personale. Prandaj, është thelbë- sore që edukimi fizik të vlerësohet dhe të integro- het si një pjesë e rëndësishme e përditshmërisë së studentëve."
   },
   "output": {

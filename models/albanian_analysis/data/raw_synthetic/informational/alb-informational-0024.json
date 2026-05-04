@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Vizitë studimore në kompanitë “InfoSoft” dhe “Algrafika” Praktika mësimore, është një nga lëndët që na përfshin të gjithëve me pasion.",
+      "Duket se padurimi për t'i vënë në jetë ato njohuri teorike që marrim ndër libra, gjen shteg për t'u shprehur më në fund.",
+      "Më datë 15 tetor, nxënësit e vitit të katërt të degës Biznes, në kuadër të lëndës “Praktikë Mësimore”, realizuan një vizitë studimore në kompanitë InfoSoft dhe Algrafika, ku u njohën nga afër me proceset e rekrutimit, kontraktimit dhe organizimit të punës në këto ndërmarrje."
+    ],
     "article_text": "Vizitë studimore në kompanitë “InfoSoft” dhe “Algrafika” Praktika mësimore, është një nga lëndët që na përfshin të gjithëve me pasion. Duket se padurimi për t'i vënë në jetë ato njohuri teorike që marrim ndër libra, gjen shteg për t'u shprehur më në fund. Më datë 15 tetor, nxënësit e vitit të katërt të degës Biznes, në kuadër të lëndës “Praktikë Mësimore”, realizuan një vizitë studimore në kompanitë InfoSoft dhe Algrafika, ku u njohën nga afër me proceset e rekrutimit, kontraktimit dhe organizimit të punës në këto ndërmarrje. InfoSoft Office është një ndër kompanitë lidere në Shqipëri dhe Kosovë në furnizimin me materiale kancelarie, produkte letre dhe materiale printimi nga markat më të njohura ndërkombëtare. Kompania u shërben një game të gjerë klientësh, duke filluar nga studentë, biznese private, institucione publike, organizata joqeveritare, deri te bankat, kompanitë e telekomunikacionit dhe trupat diplomatike. Gjatë vizitës, nxënësit, të shoqëruar nga mësuese Desdemona, patën mundësinë të njihnin nga afër jo vetëm mënyrën e prodhimit dhe shitjes së këtyre produkteve, por edhe procesin e përgatitjes së dokumentacionit financiar dhe administrativ që shoqëron çdo transaksion shitjeje. Një ndër momentet që la më shumë përshtypje ishte mënyra e punësimit të punonjësve. Kandidatët kalonin disa faza testimesh për t'u përzgjedhur, çka kërkon përgatitje, përkushtim dhe vullnet. Për nxënësit e interesuar, kompania ofroi mundësinë e intership-eve, me qëllim zhvillimin e aftësive profesionale dhe përgatitjen e tyre për tregun e punës, një mundësi e çmuar për formimin praktik dhe rritjen personale. Pas përfundimit të vizitës, nxënësit praktikuan njohuritë e fituara, veçanërisht ato që lidhen me dokumentacionin e biznesit, në praktikën që zhvillohet në shkollë."
   },
   "output": {

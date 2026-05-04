@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Mesazhi i yjeve përmbledh ndjenjën e humbjes dhe nevojës për t’u kujtuar një person të dashur.",
+      "Autori mendon për porositë e kaluara, për shpresën dhe frikën se ëndrrat nuk do të realizohen.",
+      "Yjet dhe qielli përdoren si metafora për vetminë, vlerësimin dhe përpjekjen për të kujtuar frymën e dhënë."
+    ],
     "article_text": "The starred message If I know that what I said made you smile tonight, I'm going to star your message so I never forget how. When the time passes by and I won’t be able to text you, I’ll go and see the starry sky with moments like this one. I'll read through messages of the past and wish that I could text you still. I’ll see that you are online and dream you’d remember me. But I do not believe my dreams will ever come true, for the stars I seek are bright and stable and not coming down to me. If I feel worthless and alone, if tears prick my eyes, God, remind me that I stand under all these stars. And I might want to reach them and go back to this time where I can casually say hi and you’d give out a smile. And I am sorry, but it is true that I don’t believe in myself. But I shall keep my promise and remember what you said. I’ll remember to breathe, even if I feel like an ocean is over my head, and I’ll remember all the advice you gave so casually in the end. I’m sorry that I can’t tell you more than I already have. I’m sorry that these words by you will never be read."
   },
   "output": {

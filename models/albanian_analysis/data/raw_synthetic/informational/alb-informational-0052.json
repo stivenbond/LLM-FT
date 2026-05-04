@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Podcast” me Aida Baro Jo të rralla janë rastet kur nxënësit e shkollës sonë kanë fatin të njihen nga afër me njerëz që kanë dhënë dhe vazhdojnë të japin një kontribut të madh për botën e leximit dhe të letërsisë.",
+      "Së fundmi, nxënësit e Klubit “Miku i Librit”, nën mbikëqyrjen e mësueses Dhuratës,organizuan një podcast shumë të veçantë, ku e ftuar ishte zonja Aida Baro, një figurë kyçe në fushën e përkthimit dhe redaktimit letrar në Shqipëri.",
+      "Gjatë këtij takimi, nxënësit patën mundësinë të njihnin nga afër punën dhe përvojën e saj të pasur."
+    ],
     "article_text": "“Podcast” me Aida Baro Jo të rralla janë rastet kur nxënësit e shkollës sonë kanë fatin të njihen nga afër me njerëz që kanë dhënë dhe vazhdojnë të japin një kontribut të madh për botën e leximit dhe të letërsisë. Së fundmi, nxënësit e Klubit “Miku i Librit”, nën mbikëqyrjen e mësueses Dhuratës,organizuan një podcast shumë të veçantë, ku e ftuar ishte zonja Aida Baro, një figurë kyçe në fushën e përkthimit dhe redaktimit letrar në Shqipëri. Gjatë këtij takimi, nxënësit patën mundësinë të njihnin nga afër punën dhe përvojën e saj të pasur. Aida Baro është përkthyese dhe redaktore letrare me një karrierë të jashtëzakonshme, e njohur për përkthimin dhe redaktimin e mbi 1000 filmave dhe dokumentarëve. Ajo ka bashkëpunuar me autorë ndërkombëtarë të shquar si Italo Calvino, Sveva Casati Modignani, Julia Navarro dhe Primo Levi, duke sjellë veprat e tyre tek lexuesi shqiptar me profesionalizëm dhe ndjeshmëri kulturore. Disa nga veprat më të njohura që ka përkthyer përfshijnë “Armëpushimi” dhe “Të mbyturit dhe të shpëtuarit” të Primo Levi-t, si dhe “Jeta shpirtërore” të Alberto Moravia-s. Për kontributin e saj të spikatur, Aida Baro ka marrë çmime të rëndësishme, përfshirë Çmimin Kombëtar të Përkthimit (Tiranë, 2017) dhe Çmimin “Përkthimi më i mirë i vitit” (Prishtinë, 2024). Ajo është gjithashtu kryeredaktore pranë shtëpisë botuese “Pegi” dhe themeluese e “The Aida Baro Literary Agency”, agjencisë së parë letrare në Shqipëri, duke kontribuar në promovimin e letërsisë dhe në mbështetjen e autorëve shqiptarë dhe ndërkombëtarë. Gjatë podcastit, nxënësit kishin mundësinë të bënin pyetje të ndryshme dhe të mësonin më shumë rreth përkthimit letrar, sfidave që sjell ky profesion dhe mënyrës se si përvoja dhe pasioni mund të shndërrohen në kontribute të rëndësishme për kulturën dhe letërsinë. Kjo veprimtari ishte një përvojë e vlefshme mësimore dhe frymëzuese për të gjithë pjesëmarrësit, duke nxjerrë në pah rëndësinë e leximit, përkthimit dhe krijimtarisë letrare. Një falënderim i veçantë shkon për Aida Baro për ndarjen e dijes dhe për frymëzimin e dhënë përmes pasionit të saj për letërsinë dhe përkthimin."
   },
   "output": {

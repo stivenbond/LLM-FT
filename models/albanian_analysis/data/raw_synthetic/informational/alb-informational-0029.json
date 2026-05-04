@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Suksesi në Maratonën Kombëtare të Sigurisë Kibernetike Arritjet e nxënësve tanë në mjedise konkuruese kombëtare vazhdojnë të vërtetojnë se përgatitja akademike në Institutin \"Harry Fultz\" është e ndërtuar mbi themele të forta praktike dhe vizionare.",
+      "Së fundmi, përfaqësuesit tanë u nderuan me vendin e tretë në Maratonën Kombëtare të Sigurisë Kibernetike, një event prestigjioz i organizuar nga Autoriteti Kombëtar për Certifikimin Elektronik dhe Sigurinë Kibernetike (AKSK).",
+      "Ky sukses nuk është rastësor, por produkt i një pune intensive gjashtëmujore, ku nxënësit u përballën me skenarë kompleksë dhe sfida reale të botës digjitale."
+    ],
     "article_text": "Suksesi në Maratonën Kombëtare të Sigurisë Kibernetike Arritjet e nxënësve tanë në mjedise konkuruese kombëtare vazhdojnë të vërtetojnë se përgatitja akademike në Institutin \"Harry Fultz\" është e ndërtuar mbi themele të forta praktike dhe vizionare. Së fundmi, përfaqësuesit tanë u nderuan me vendin e tretë në Maratonën Kombëtare të Sigurisë Kibernetike, një event prestigjioz i organizuar nga Autoriteti Kombëtar për Certifikimin Elektronik dhe Sigurinë Kibernetike (AKSK). Ky sukses nuk është rastësor, por produkt i një pune intensive gjashtëmujore, ku nxënësit u përballën me skenarë kompleksë dhe sfida reale të botës digjitale. Në një konkurrencë ku morën pjesë mbi 500 garues nga universitetet dhe shkollat profesionale më të zëshme në vend, ekipi ynë i përbërë nga Emanuel Dervishi, Toni Tatazi, Bergit Haveraj, Arsi Hoxha dhe Mars Gjata, tregoi një nivel të lartë përgatitjeje dhe qëndrueshmërie. Pjesëmarja në nivele të tilla kërkon jo vetëm njohuri teknike, por edhe një aftësi të spikatur për të punuar në grup nën presion. Një vlerësim i veçantë i shkon nxënësit Emanuel Dervishi, i cili u dallua për performancën e tij në sfidën \"Capture The Flag\" (CTF), duke u pozicionuar denjësisht midis konkurentëve të nivelit universitar. Ky rezultat reflekton punën e palodhur të vetë nxënësve, por edhe mentorimin e përkushtuar të mësuesve udhëheqës, Eneida Allkoci dhe Andi Gjeta. Rolin e tyre si udhërrëfyes në këtë rrugëtim e shohim si shtyllën kryesore të suksesit, duke dëshmuar se bashkëpunimi i ngushtë midis nxënësit dhe instruktorit është formula që garanton rezultate të prekshme. Arritja në këtë maratone është një provë e gjallë se kurrikula jonë dhe praktikat laboratorike përputhen plotësisht me kërkesat më të larta të sigurisë digjitale sot. Për komunitetin tonë, ky lajm shërben si një burim krenarie dhe njëkohësisht si një nxitje për të gjithë nxënësit që aspirojnë të sfidojnë veten në arena kombëtare e ndërkombëtare. Përvoja e fituar në këtë maratonë është një investim i çmuar në rrugëtimin profesional të secilit prej pjesëmarrësve, duke dëshmuar se me përkushtim dhe udhëheqjen e duhur, kufijtë e suksesit janë gjithmonë në rritje. Përgëzojmë nxënësit tanë për këtë përfaqësim dinjitoz që forcon edhe më shumë emrin e institucionit tonë në sferën e teknologjisë."
   },
   "output": {

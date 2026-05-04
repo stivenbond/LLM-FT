@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Yjet e rrëmbyera paraqiten si dëshmitarë që mbajnë ëndrrat dhe dëshirat tona.",
+      "Artikulli fliste për njerëzit që hedhin dëshirat e tyre te yjet që bien dhe për shpresën se ato mund t’i plotësojnë zemrat.",
+      "Në fund, shkrimi lidh dashurinë dhe sakrificën me pritjen për të vërtetuar ëndrrat."
+    ],
     "article_text": "The stars we dream upon They say stars collect dreams as they fall down. People go and put their wishes on these shooting stars. These stars are said to make your heart wishes come true. I wonder how it happens. Do hopes make things true? I say that the stars - the ones that burn so deep, are always the ones in where we believe. Although they are hurting and burning themselves, they still stay in the sky, quietly, looking at our tears. And when the pain they see every night, when it finally weighs them down, then they start falling from the high, thinking they can reach you, and can make you smile. So they fall down just like tears, and they burn the sky the way tears burn your skin, because that is all that they know best that is all they have seen in the endless darkness. And as a star shower you see, remember someone holds you dear. Someone up there in the sky, falls just for you to smile. Someone, or something. Whatever it is! Cries down with burning tears, and it collects all your dreams, giving you a view that sleep never can give. So I don't know if hope can make everything come true, but love and sacrifice sure will do."
   },
   "output": {

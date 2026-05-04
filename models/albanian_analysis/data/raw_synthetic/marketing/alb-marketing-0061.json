@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Ku talenti merr formë – Klubi Multimedias Në epokën në të cilën po jetojmë, klubi i Multimedias në institutin “Harry Fultz” është kthyer në një hapësirë krijuese, frytdhënëse dhe sa më afër realitetit.",
+      "Me një përvojë shumëvjeçare, ky klub konsiderohet si një ndër të preferuarit e nxënësve të drejtimeve të ndryshme të shkollës, qofshin të drejtimit Elektronikë-IT apo ata të drejtimit të përgjithshëm.",
+      "Multimedia është një ndër fushat më të zhvilluara të periudhës digjitale në të cilën ndodhemi, aq sa mund të themi se është kthyer në diçka të përditshme të rutinës sonë."
+    ],
     "article_text": "Ku talenti merr formë – Klubi Multimedias Në epokën në të cilën po jetojmë, klubi i Multimedias në institutin “Harry Fultz” është kthyer në një hapësirë krijuese, frytdhënëse dhe sa më afër realitetit. Me një përvojë shumëvjeçare, ky klub konsiderohet si një ndër të preferuarit e nxënësve të drejtimeve të ndryshme të shkollës, qofshin të drejtimit Elektronikë-IT apo ata të drejtimit të përgjithshëm. Multimedia është një ndër fushat më të zhvilluara të periudhës digjitale në të cilën ndodhemi, aq sa mund të themi se është kthyer në diçka të përditshme të rutinës sonë. Çdo ditë zgjohemi me multimedia, flasim për multimedia dhe diskutojmë për këtë fushë, e cila kombinon në vetvete media të ndryshme digjitale, të tilla si: tekst, imazh, audio, grafikë apo video. Nga dita në ditë, zhvillimi i kësaj fushe po merr përmasa globale dhe bashkëkohore, duke u përqafuar nga njerëz të ndryshëm. Në institutin “Harry Fultz” , klubi i Multimedias po bëhët gjithnjë edhe më krijues dhe më artistik, ku nxënësit eksperimentojnë me elemente të ndryshme. Nga podcastet dhe filmat e ndryshëm, tashmë anëtarët e klubit të Multimedias kanë mundësuar një platformë të re origjinale, atë të Fultz News me Sherif Patokun dhe Pilaf Gushën si lajmdhënësit kryesor. Kjo ishte një ndër idetë e reja të sjellë nga nxënësit K.Agolli dhe A.Voci, e aktruar nga nxënësja e vitit të tretë të drejtimit Elektronikë-IT, K.Agolli dhe nga nxënësi i vitit të parë të drejtimit Elektronikë-IT , O.Demirxhiu. Krahas kësaj platforme të re artistike, në takimin e organizuar këtë muaj,nën udhëheqjen e mësuesit Jurgen Metalla, u paraqitën edhe punimet më të mira, të realizuara përgjatë viteve nga nxënësit tanë. Këto projekte, të prezantuara në bibliotekën e shkollës, shërbejnë si një panoramë për të gjithë ata nxënës që janë të interesuar për t’u bërë anëtarë të këtij klubi dhe për të treguar bashkëpunimin aq frytdhënës ndërmjet studentëve tanë. Ashtu siç do herë tjetër, klubet në insitutin “Harry Fultz” asnjëherë nuk na zhgënjejnë, duke treguar disiplinën, pergjegjësitë dhe bashkëpunimin e secilit nxënës të tij. Duke iu uruar klubit të Multimedias sa më shumë sukses në projektet e reja, ju rikujtojmë se kushdo që ka dëshirë mund të bëhet pjesë e këtij klubi, ku talenti merr formë dhe jetë."
   },
   "output": {

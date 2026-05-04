@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Finalja e Debatit Ekonomik Nga data 3 deri më 5 tetor, në mjediset e Piramidës së Tiranës, u zhvillua një ngjarje e rëndësishme për nxënësit e shkollave, \"Debati Ekonomik\", zhvilluar mes gjimnazeve të ndryshme të Shqipërisë.",
+      "Ky event, i organizuar nga \"Junior Achievement Albania\", pati si synim të motivojë të rinjtë në diskutime rreth temave aktuale ekonomike, duke u ofruar mundësinë për të përmirësuar aftësitë e tyre komunikative dhe kritike.",
+      "Veprimtaria zgjati për tri ditë, duke përfshirë faza eliminatore dhe finale."
+    ],
     "article_text": "Finalja e Debatit Ekonomik Nga data 3 deri më 5 tetor, në mjediset e Piramidës së Tiranës, u zhvillua një ngjarje e rëndësishme për nxënësit e shkollave, \"Debati Ekonomik\", zhvilluar mes gjimnazeve të ndryshme të Shqipërisë. Ky event, i organizuar nga \"Junior Achievement Albania\", pati si synim të motivojë të rinjtë në diskutime rreth temave aktuale ekonomike, duke u ofruar mundësinë për të përmirësuar aftësitë e tyre komunikative dhe kritike. Veprimtaria zgjati për tri ditë, duke përfshirë faza eliminatore dhe finale. Pjesëmarrësit ishin motivuar dhe përgatitur që prej muajit shtator, kur nisën trajnimin dhe shqyrtimet për debatin. Ekipi përfaqësues i shkollës, i përbërë nga tre pjesëmarrës të vitit të dytë, D. Ktona, V. Daçi dhe H. Toçi, mori pjesë me përkushtim të madh dhe përfaqësoi denjësisht shkollën në këtë garë të fortë. Debatet u zhvilluan në një format interesant, ku secili pjesëtar mbajti një fjalim 8-minutësh mbi një tematikë të caktuar ekonomike, e cila ishte e lidhur ngushtë me sfidat dhe zhvillimet më të fundit në këtë fushë. Secili prej anëtarëve të grupit paraqiti argumentet e veta një herë, teksa në fund të çdo debati zhvillohej një fjalim përmbyllës e përmbledhës. Ekipi përparoi përmes fazave të ndryshme të garës, duke nisur nga faza e parë eliminatore të premten dhe duke kaluar me sukses në fazat e tjera. Gjatë të shtunës, u realizuan tre debate të rëndësishme: dy faza eliminatore dhe një çerekfinale. Ndërsa të dielën u mbajtën dy debate të tjera, përfshirë gjysmëfinalen dhe finalen përfundimtare. Në këtë finale, ekipi i \"Harry Fultz\" përballë shkollës \"TES\", tregoi një performancë të shkëlqyer ku mori çmimin e dytë, një rezultat i rëndësishëm që e shpalli këtë veprimtari një sukses të vërtetë. Pjesëmarrësit u shprehën se kjo ishte një përvojë argëtuese dhe thelbësore që i ndihmoi ata të zhvillonin aftësitë e tyre profesionale dhe të komunikonin më mirë mbi çështjet e linjës ekonomike. Ky debat përbën një mundësi e veçantë për të rinjtë shqiptarë për të përforcuar mendimin kritik dhe aftësitë e të folurit në publik, duke u dhënë atyre një mundësi për t’u marrë më afër në tematikat më kyçe të shoqërisë dhe ekonomisë së sotme."
   },
   "output": {

@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Gara sportive vazhdon!",
+      "Në shkollën \"Harry Fultz\" po vazhdon kampionati sportiv mes klasave, një veprimtari që ka sjellë shumë energji dhe entuziazëm mes nxënësve.",
+      "Ky kampionat organizohet çdo vit dhe ka si qëllim të nxisë veprimtarinë fizike, bashkëpunimin dhe frymën e garës mes nxënësve të klasave të ndryshme."
+    ],
     "article_text": "Gara sportive vazhdon! Në shkollën \"Harry Fultz\" po vazhdon kampionati sportiv mes klasave, një veprimtari që ka sjellë shumë energji dhe entuziazëm mes nxënësve. Ky kampionat organizohet çdo vit dhe ka si qëllim të nxisë veprimtarinë fizike, bashkëpunimin dhe frymën e garës mes nxënësve të klasave të ndryshme. Në këtë veprimtari sportive, klasat konkurrojnë në disa disiplina të ndryshme, si futboll, volejboll dhe basketboll. Çdo ekip përfaqëson klasën e vet dhe përpiqet të japë maksimumin në fushë për të arritur rezultate sa më të mira. Ndeshjet kanë qenë shumë interesante dhe konkurruese, duke krijuar emocione si për lojtarët ashtu edhe për nxënësit që i ndjekin dhe i mbështesin ekipet e tyre. Përveç aspektit të garës, kampionati ndihmon edhe në forcimin e bashkëpunimit dhe respektit mes nxënësve. Përmes sportit, nxënësit mësojnë të punojnë në grup, të respektojnë kundërshtarin dhe të përballen me sfidat në mënyrë të drejtë dhe sportive. Në përfundim të kampionatit do të shpallen klasat fituese për secilin sport: futboll, volejboll dhe basketboll. Gara sportive vazhdon dhe të gjithë presin me padurim ndeshjet e radhës për të parë se cilat klasa do të arrijnë të fitojnë dhe të shpallen kampione në këtë veprimtari sportive në \"Harry Fultz\"."
   },
   "output": {

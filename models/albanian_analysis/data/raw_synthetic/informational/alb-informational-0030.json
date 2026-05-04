@@ -9,8 +9,43 @@
     "reviewed_at": ""
   },
   "input": {
-    "brand_guidelines": "",
-    "key_points": [],
+    "brand_guidelines": {
+      "client_id": "shkolla-teknike-akademike",
+      "client_name": "Shkolla Teknike Akademike",
+      "language": "sq",
+      "tone_descriptors": [
+        "profesional",
+        "frymëzues",
+        "i qartë",
+        "miqësor"
+      ],
+      "forbidden_phrases": [
+        "thjesht një diplomë",
+        "nuk ka rëndësi praktika",
+        "mjafton teoria",
+        "është shumë e vështirë për t’u arritur"
+      ],
+      "preferred_phrases": [
+        "veprimtari praktike",
+        "zgjidhje konkrete",
+        "mësim i aplikuar",
+        "zhvillim profesional",
+        "mendim kritik",
+        "përgatitje për të ardhmen"
+      ],
+      "formality_level": "semi-formal",
+      "target_audience": "Nxënës të arsimit të mesëm, studentë të rinj dhe të interesuar për fusha teknike dhe profesionale, si dhe prindër që kërkojnë një edukim të orientuar drejt praktikës dhe tregut të punës.",
+      "sentence_length_preference": "varied",
+      "active_voice_required": true,
+      "first_person_allowed": false,
+      "exclamation_marks_allowed": false,
+      "notes": "Shkrimet duhet të balancojnë qartësinë akademike me një ton motivues dhe të aksesueshëm, duke shmangur formulimet tepër të thata ose burokratike; artikujt duhet të trajtojnë temat si studime rasti që lidhin teorinë me zbatimin praktik, duke theksuar disiplinën, etikën e punës dhe rolin e projekteve laboratorike në krijimin e avantazhit konkurrues; lejohet një fleksibilitet i moderuar në stil për të ruajtur natyrshmërinë dhe rrjedhshmërinë e tekstit, për sa kohë ruhet koherenca me identitetin e markës; duhet të nënvizohet zhvillimi i mendimit kritik dhe formimi i udhëheqësve teknikë në kontekstin e një epoke automatizimi, si dhe të përfshihet në mënyrë organike një thirrje për veprim që inkurajon lexuesin të shfrytëzojë burimet dhe jetën studentore si një inkubator për kalimin nga ide abstrakte në zgjidhje konkrete me ndikim në komunitet."
+    },
+    "key_points": [
+      "Nxënësit e Muajit Ejona Kalluçi Ejona Kalluçi, një nxënëse e vitit të tretë në Gjimnazin e Përgjithshëm dhe njëkohësisht edhe presidentja e shkollës sonë, shquhet si një nxënëse e shkëlqyer dhe shumë e motivuar.",
+      "Ajo demonstron performancë të jashtëzakonshme si në lëndët shkencore, po ashtu edhe në ato shoqërore.",
+      "Përtej mësimeve, Ejona njihet për përgjegjshmërinë, aftësinë organizative dhe përkushtimin maksimal në çdo veprimtari që ndërmerr."
+    ],
     "article_text": "Nxënësit e Muajit Ejona Kalluçi Ejona Kalluçi, një nxënëse e vitit të tretë në Gjimnazin e Përgjithshëm dhe njëkohësisht edhe presidentja e shkollës sonë, shquhet si një nxënëse e shkëlqyer dhe shumë e motivuar. Ajo demonstron performancë të jashtëzakonshme si në lëndët shkencore, po ashtu edhe në ato shoqërore. Përtej mësimeve, Ejona njihet për përgjegjshmërinë, aftësinë organizative dhe përkushtimin maksimal në çdo veprimtari që ndërmerr. Si presidente, Ejona ka treguar lidership të fortë, duke përfaqësuar denjësisht zërin e nxënësve dhe duke kontribuar në organizimin e veprimtarive dhe nismave të ndryshme shkollore. Rezultatet e saj akademike dhe angazhimi i vazhdueshëm e bëjnë atë një model për t’u ndjekur. Dea Ktona Dea Ktona, nxënëse e vitit të dytë në programin e Elektronikës dhe IT-së dhe njihet gjerësisht si një nga programueset më të talentuara në shkollë. Dea është dalluar për përkushtimin dhe seriozitetin në mësime. Ajo tregon interes të veçantë për lëndët profesionale dhe është gjithmonë e gatshme të përfshihet në projekte praktike dhe veprimtari të tjera. Falë arritjeve të saj të shumta në fusha të ndryshme, Dea Ktona është një nga nxënëset më të spikatura të shkollës sonë. Fituesja e vendit të parë në garën kombëtare të inovacionit TeensInAI Innovation Hub, me mbi 200 pjesëmarrës nga e gjithë Shqipëria, projekti i saj u vlerësua për kreativitetin dhe ndikimin social. Fituesja e Vendit të Parë në Kampionatin e Debatit Rinor – Redebate, ku së bashku me ekipin e saj tregoi aftësi të shkëlqyera argumentimi, mendimi kritik dhe bashkëpunimi. Arritjet e saj në teknologji, art dhe debat e bëjnë Dean një shembull të vërtetë të nxënëses multidimensionale, e talentuar dhe e përkushtuar. Anteo Shkalla Anteo Shkalla është një nxënës i vitit të tretë në Administrim Biznesi që dallohet për seriozitetin dhe përkushtimin e tij në mësime. Ai ka treguar rezultate të qëndrueshme dhe interes të veçantë për lëndët profesionale duke demonstruar vazhdimisht përsosmëri në ekonomi, financë dhe kontabilitet. Në projekte dhe detyra praktike, ai shfaq aftësi të mira organizative dhe mendim analitik. Anteo është bashkëpunues dhe aktiv në diskutimet në klasë, duke kontribuar me ide konstruktive. Anteo angazhohet në projekte të shumta shkollore, ku kontribuon me përgjegjësi, punë në grup dhe ide të strukturuara mirë. Ai synon të zhvillojë më tej aftësitë e tij në fushën e menaxhimit dhe sipërmarrjes. Përkushtimi i tij i vazhdueshëm dhe gatishmëria për të bashkëpunuar premton suksese edhe më të mëdha në të ardhmen. Aleksandros Dino Aleksandros Dino është një nxënës i vitit të dytë në Automekanikë dhe shquhet për përkushtimin në lëndët praktike dhe teorike. Ai tregon interes të madh për profesionin dhe angazhohet me seriozitet në çdo detyrë që merr përsipër. Si senator i klasës, ai përfaqëson me përgjegjësi dhe korrektësi shokët e tij. Aleksandrosi është gjithmonë i gatshëm të ndihmojë dhe të bashkëpunojë në veprimtari shkollore. Puna dhe qëndrimi i tij pozitiv e bëjnë një shembull të mirë për komunitetin tonë shkollor. Ai përpiqet vazhdimisht të përmirësojë aftësitë teknike dhe praktike në fushën e automekanikës. Angazhimi i tij në klasë dhe jashtë saj tregon pjekuri dhe dëshirë për të ecur përpara."
   },
   "output": {
