@@ -1,0 +1,162 @@
+Të është dhënë një artikull cilësor në gjuhën shqipe që respekton *Drejtshkrimin e Gjuhës Shqipe* dhe pasqyron një zë të qëndrueshëm të markës, të përcaktuar në JSON-in e udhëzimeve të markës; detyra jote është që fillimisht ta transformosh në mënyrë të brendshme këtë “artikull të artë” në një version të degraduar në mënyrë delikate duke futur gabime të kontrolluara dhe realiste në disa dimensione, dhe më pas të gjenerosh një JSON të strukturuar vlerësimi që pasqyron këto degradime sipas skemës së ofruar AlbanianEditorTrainingExample. Degradimi duhet të jetë natyral dhe i larmishëm, duke përfshirë, por pa u kufizuar në, gabime drejtshkrimore, mospërputhje gramatikore, keqpërdorim të standardeve leksikore të shqipes si përdorimi i panevojshëm i huazimeve (p.sh., përdorimi i “aktivitet” në vend të “veprimtari”), dobësi strukturore (p.sh., rrjedhë logjike e ndërprerë, kalime të dobëta ose progresion i paqartë), shtjellim të pabarabartë ose të pamjaftueshëm të pikave kryesore, si dhe probleme stili në të shkruar si përdorimi i tepërt i formës pësore, mospërputhje toni ose prania e sarkazmës apo ironisë delikate që bie ndesh me përshkruesit e synuar të tonit në udhëzimet e markës; gjithashtu, fut devijime të rastësishme nga kufizimet e markës si niveli i formalitetit, formulimet e preferuara, pritshmëritë për gjatësinë e fjalive ose zëri narrativ (p.sh., përdorim i paqëllimshëm i vetës së parë nëse nuk lejohet). Artikulli i modifikuar duhet të mbetet koherent dhe i besueshëm, jo i korruptuar artificialisht. Nuk duhet të shfaqësh artikullin e korrigjuar apo origjinal — përfshi vetëm versionin e degraduar brenda fushës `input.teksti_i_artikullit`. Më pas prodho JSON-in përfundimtar duke ndjekur rreptësisht këtë skemë:
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ShembullTrajnimiRedaktuesShqip",
+  "version": "2.0.0",
+  "description": "Skemë kanonike për të gjithë shembujt e trajnimit. Mos modifikoni pa rritur versionin.",
+  "type": "object",
+  "required": ["id", "metadata", "input", "output"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^alb-[a-z]+-[0-9]{4}$",
+      "description": "Identifikues unik për shembullin e trajnimit."
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["regjistri", "shënuesi", "i_pranueshëm_për_rlhf", "version"],
+      "properties": {
+        "regjistri": {
+          "type": "string",
+          "enum": ["editorial", "informativ", "marketingu", "klasik", "i_përzier"],
+          "description": "Regjistri gjuhësor i artikullit burimor."
+        },
+        "shënuesi": {
+          "type": "string",
+          "enum": ["njeri", "sintetik", "njeri_korrigjoi_sintetik"],
+          "description": "Burimi i shënimeve të trajnimit."
+        },
+        "i_pranueshëm_për_rlhf": {
+          "type": "boolean",
+          "description": "Nëse shembulli plotëson standardet e cilësisë për trajnimin RLHF."
+        },
+        "version": {
+          "type": "string",
+          "description": "Versioni i skemës së përdorur për këtë shembull."
+        },
+        "recensuesi": {
+          "type": "string",
+          "description": "Identifikuesi i personit që rishikoi shembullin."
+        },
+        "rishikuar_më": {
+          "type": "string",
+          "format": "date",
+          "description": "Data kur u rishikua shembulli."
+        }
+      }
+    },
+    "input": {
+      "type": "object",
+      "required": ["teksti_i_artikullit"],
+      "properties": {
+        "udhëzimet_e_markës": {
+          "type": "object",
+          "description": "Dokumenti i zërit të markës së klientit, i injektuar në kohën e konkluzionit. Objekt bosh nëse nuk ka.",
+          "required": ["id_klienti", "emri_i_klientit", "niveli_i_formalitetit"],
+          "properties": {
+            "id_klienti": { "type": "string" },
+            "emri_i_klientit": { "type": "string" },
+            "përshkruesit_e_tonit": { "type": "array", "items": { "type": "string" } },
+            "fraza_të_ndaluara": { "type": "array", "items": { "type": "string" } },
+            "fraza_të_preferuara": { "type": "array", "items": { "type": "string" } },
+            "niveli_i_formalitetit": { "type": "string", "enum": ["formal", "gjysmë-formal", "informal"] },
+            "audienca_e_synuar": { "type": "string" },
+            "preferenca_e_gjatësisë_së_fjalisë": { "type": "string", "enum": ["e_shkurtër", "e_mesme", "e_gjatë", "e_shumëllojshme"] },
+            "kërkohet_veprorja": { "type": "boolean" },
+            "lejohet_veta_e_parë": { "type": "boolean" },
+            "lejohen_pasthirrmat": { "type": "boolean" },
+            "shënime": { "type": "string" }
+          }
+        },
+        "pikat_kryesore": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Pikat kryesore të përmbledhjes origjinale që i janë dhënë shkrimtarit. Varg bosh nëse nuk është dhënë përmbledhje."
+        },
+        "teksti_i_artikullit": {
+          "type": "string",
+          "minLength": 100,
+          "description": "Teksti i plotë i artikullit që do të redaktohet."
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "required": ["gramatika", "stili_i_të_shkruarit", "formatimi", "përputhshmëria_e_markës", "përputhshmëria_e_marketingut", "struktura"],
+      "properties": {
+        "gramatika": { "$ref": "#/definitions/detyrëUdhëzuese" },
+        "stili_i_të_shkruarit": { "$ref": "#/definitions/detyrëStili" },
+        "formatimi": { "$ref": "#/definitions/detyrëUdhëzuese" },
+        "përputhshmëria_e_markës": { "$ref": "#/definitions/detyrëMePikë" },
+        "përputhshmëria_e_marketingut": { "$ref": "#/definitions/detyrëMePikë" },
+        "struktura": { "$ref": "#/definitions/detyrëStrukture" }
+      }
+    }
+  },
+  "definitions": {
+    "problem": {
+      "type": "object",
+      "required": ["vendndodhja", "lloji_i_problemit", "udhëzim", "ashpërsia"],
+      "properties": {
+        "vendndodhja": { "type": "string" },
+        "lloji_i_problemit": { "type": "string" },
+        "udhëzim": { "type": "string" },
+        "ashpërsia": { "type": "string", "enum": ["kritike", "madhore", "e_vogël"] }
+      }
+    },
+    "detyrëUdhëzuese": {
+      "type": "object",
+      "required": ["vendimi", "problemet"],
+      "properties": {
+        "vendimi": { "type": "string", "enum": ["kalon", "nuk_kalon", "i_pjesshëm"] },
+        "problemet": { "type": "array", "items": { "$ref": "#/definitions/problem" } }
+      }
+    },
+    "detyrëStili": {
+      "allOf": [
+        { "$ref": "#/definitions/detyrëUdhëzuese" },
+        {
+          "properties": {
+            "regjistri_i_zbuluar": { "type": "string", "enum": ["editorial", "informativ", "marketingu", "klasik", "i_përzier"] },
+            "regjistri_i_pritshëm": { "type": "string", "enum": ["editorial", "informativ", "marketingu", "klasik", "i_përzier", "i_paspecifikuar"] }
+          }
+        }
+      ]
+    },
+    "detyrëMePikë": {
+      "type": "object",
+      "required": ["pikët", "vendimi", "problemet"],
+      "properties": {
+        "pikët": { "type": "number", "minimum": 0, "maximum": 100 },
+        "vendimi": { "type": "string", "enum": ["kalon", "nuk_kalon", "i_pjesshëm"] },
+        "problemet": { "type": "array", "items": { "$ref": "#/definitions/problem" } }
+      }
+    },
+    "mbulimiIPikaveKryesore": {
+      "type": "object",
+      "required": ["pika_kryesore", "e_mbuluar", "cilësia_e_përpunimit"],
+      "properties": {
+        "pika_kryesore": { "type": "string" },
+        "e_mbuluar": { "type": "boolean" },
+        "cilësia_e_përpunimit": { "type": "string", "enum": ["e_thelluar", "adekuate", "sipërfaqësore", "mungon"] }
+      }
+    },
+    "detyrëStrukture": {
+      "type": "object",
+      "required": ["vendimi", "mbulimi_i_pikave_kryesore", "lloji_i_strukturës_së_zbuluar", "udhëzim"],
+      "properties": {
+        "vendimi": { "type": "string", "enum": ["kalon", "nuk_kalon", "i_pjesshëm", "nuk_u_dha_përmbledhje"] },
+        "mbulimi_i_pikave_kryesore": { "type": "array", "items": { "$ref": "#/definitions/mbulimiIPikaveKryesore" } },
+        "lloji_i_strukturës_së_zbuluar": { "type": "string", "enum": ["lineare", "eksponenciale", "jo-lineare", "e_paqartë"] },
+        "udhëzim": { "type": "string" }
+      }
+    }
+  }
+}
+```
+
+Sigurohu që të gjitha shënimet e problemeve të jenë specifike, të lokalizuara dhe diagnostikisht të dobishme, që nivelet e ashpërsisë të ndryshojnë në mënyrë realiste, që udhëzimet të mos e rishkruajnë kurrë tekstin por vetëm të drejtojnë vëmendjen te lloji dhe vendndodhja e problemit, dhe që vlerësimi të pasqyrojë artikullin e degraduar dhe jo versionin origjinal cilësor, duke mbetur njëkohësisht në përputhje me udhëzimet e ofruara të markës. Më poshtë gjendet artikulli i artë.
+
+Rëndësia e librave në jetën tonë Librat janë të mbushur me njohuri, të japin mësime për jetën, të mësojnë për vështirësitë, dashurinë, frikën dhe çdo gjë të vogël që është pjesë e jetës. Librat kanë qenë këtu me shekuj dhe përmbajnë njohuri për të kaluarën dhe kulturat tona. Cilat janë avantazhet e librave? Të shkruara gjeni 15 përfitimet kryesore nga librat për jetën tonë: Librat janë miqtë tanë më të mirë. Librat ndriçojnë imagjinatën tuaj. Librat krijojnë besim. Librat ju ndihmojnë të rriteni emocionalisht. Librat përmirësojnë fjalorin tuaj. Librat ju ndihmojnë të mësoni gjuhë të reja. Librat rrënjosin te ju aftësi analitike. Librat ju japin mësime të rëndësishme për jetën. Librat mprehin zgjuarsinë tuaj. Librat i bëjnë nxënësit inteligjentë. Librat përmirësojnë kujtesën. Librat lehtësojnë stresin e nxënësve. Librat përmirësojnë aftësitë tuaja të të shkruarit. Librat ndihmojnë në vetë-përmirësim. Leximi i librave përmirëson aftësitë tuaja komunikuese. Librat janë miku juaj më i mirë Një nga arsyet kryesore që tregon rëndësinë e librave në jetën tonë është se librat veprojnë si miqtë tanë më të mirë. Miqtë janë një nga pjesët më të rëndësishme të jetës sonë. Ne nuk mund ta imagjinojmë jetën tonë pa shoqërinë e një miku të mirë. Në mënyrë të ngjashme, një libër është si një mik i mirë që vazhdimisht na frymëzon të bëhemi versioni më i mirë i vetes. Librat e pasurojnë mendjen tonë me njohuri ashtu si një mik i mirë. Librat ndriçojnë imagjinatën tuaj Një aspekt tjetër i rëndësishëm për të kuptuar rëndësinë e librave në jetën tonë është se librat janë një nga format më krijuese të artit. Çdo libër që lexojmë ka fuqinë për të na transformuar në një botë të ndryshme të mbushur me disa personazhe të mahnitshëm. Librat mund të rrisin fuqinë e imagjinatës sonë dhe mund të veprojnë si një portë që hap dyert për një botë ëndrrash, larg realitetit. Imagjinata dhe krijimtaria juaj do të simulohen duke lexuar një libër të mirë imagjinar. Librat i japin perspektivë botës përreth jush Një libër i mirë ka fuqinë të ndryshojë mënyrën se si ne mendojmë, flasim dhe analizojmë gjërat. Ka libra të shumtë të shkruar në disa zhanre dhe çdo libër vjen me këndvështrimin e tij unik. Leximi na jep një avantazh të analizimit të mjediseve të ndryshme, gjë që e shtyn mendjen tonë të jetë vëzhguese. Librat ndihmojnë në zhvillimin e prezencës së mendjes dhe aftësive vëzhguese, duke ndriçuar kështu rëndësinë e librave në jetën tonë. Librat rrisin vetëbesimin Kur lexojmë një libër, mësojmë për betejat dhe vështirësitë e personazheve të ndryshëm. Ndonjëherë ne madje i lidhim ato situata me jetën tonë personale. Të kuptuarit e situatave të personazheve të një libri dhe sesi ata i kapërcejnë periudhat dhe sfidat e vështira, ju jep kurajo dhe besim për t'u marrë me problemet tuaja. Gjithashtu, një person që lexon do të ketë gjithmonë më shumë njohuri për tema të ndryshme që do ta pajisin atë më mirë për situata sociale dhe për të zhvilluar biseda me grupe njerëzish. Librat ju ndihmojnë të rriteni emocionalisht Një arsye tjetër që reflekton mbi rëndësinë e librave në jetën tonë është se leximi i librave vjen me një gamë të gjerë përfitimesh mendore dhe fizike. Leximi mund të zgjerojë fjalorin dhe aftësitë tuaja të komunikimit, të cilat mund t'ju ndihmojnë të ndërveproni më mirë me njerëzit. Gjithashtu, leximi është një mënyrë efektive për të rritur kujtesën dhe për të përmirësuar fokusin tuaj. Leximi i librave ju bën empatik, sepse kur angazhoheni me personazhe imagjinare dhe kuptoni situatat e tyre, kjo lë një ndikim të fortë në aftësinë tuaj për të empatizuar njerëzit. Të kesh një qëndrim empatik ju ndihmon të rriteni në një person më të mirë.

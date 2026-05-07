@@ -1,0 +1,162 @@
+Të është dhënë një artikull cilësor në gjuhën shqipe që respekton *Drejtshkrimin e Gjuhës Shqipe* dhe pasqyron një zë të qëndrueshëm të markës, të përcaktuar në JSON-in e udhëzimeve të markës; detyra jote është që fillimisht ta transformosh në mënyrë të brendshme këtë “artikull të artë” në një version të degraduar në mënyrë delikate duke futur gabime të kontrolluara dhe realiste në disa dimensione, dhe më pas të gjenerosh një JSON të strukturuar vlerësimi që pasqyron këto degradime sipas skemës së ofruar AlbanianEditorTrainingExample. Degradimi duhet të jetë natyral dhe i larmishëm, duke përfshirë, por pa u kufizuar në, gabime drejtshkrimore, mospërputhje gramatikore, keqpërdorim të standardeve leksikore të shqipes si përdorimi i panevojshëm i huazimeve (p.sh., përdorimi i “aktivitet” në vend të “veprimtari”), dobësi strukturore (p.sh., rrjedhë logjike e ndërprerë, kalime të dobëta ose progresion i paqartë), shtjellim të pabarabartë ose të pamjaftueshëm të pikave kryesore, si dhe probleme stili në të shkruar si përdorimi i tepërt i formës pësore, mospërputhje toni ose prania e sarkazmës apo ironisë delikate që bie ndesh me përshkruesit e synuar të tonit në udhëzimet e markës; gjithashtu, fut devijime të rastësishme nga kufizimet e markës si niveli i formalitetit, formulimet e preferuara, pritshmëritë për gjatësinë e fjalive ose zëri narrativ (p.sh., përdorim i paqëllimshëm i vetës së parë nëse nuk lejohet). Artikulli i modifikuar duhet të mbetet koherent dhe i besueshëm, jo i korruptuar artificialisht. Nuk duhet të shfaqësh artikullin e korrigjuar apo origjinal — përfshi vetëm versionin e degraduar brenda fushës `input.teksti_i_artikullit`. Më pas prodho JSON-in përfundimtar duke ndjekur rreptësisht këtë skemë:
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ShembullTrajnimiRedaktuesShqip",
+  "version": "2.0.0",
+  "description": "Skemë kanonike për të gjithë shembujt e trajnimit. Mos modifikoni pa rritur versionin.",
+  "type": "object",
+  "required": ["id", "metadata", "input", "output"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^alb-[a-z]+-[0-9]{4}$",
+      "description": "Identifikues unik për shembullin e trajnimit."
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["regjistri", "shënuesi", "i_pranueshëm_për_rlhf", "version"],
+      "properties": {
+        "regjistri": {
+          "type": "string",
+          "enum": ["editorial", "informativ", "marketingu", "klasik", "i_përzier"],
+          "description": "Regjistri gjuhësor i artikullit burimor."
+        },
+        "shënuesi": {
+          "type": "string",
+          "enum": ["njeri", "sintetik", "njeri_korrigjoi_sintetik"],
+          "description": "Burimi i shënimeve të trajnimit."
+        },
+        "i_pranueshëm_për_rlhf": {
+          "type": "boolean",
+          "description": "Nëse shembulli plotëson standardet e cilësisë për trajnimin RLHF."
+        },
+        "version": {
+          "type": "string",
+          "description": "Versioni i skemës së përdorur për këtë shembull."
+        },
+        "recensuesi": {
+          "type": "string",
+          "description": "Identifikuesi i personit që rishikoi shembullin."
+        },
+        "rishikuar_më": {
+          "type": "string",
+          "format": "date",
+          "description": "Data kur u rishikua shembulli."
+        }
+      }
+    },
+    "input": {
+      "type": "object",
+      "required": ["teksti_i_artikullit"],
+      "properties": {
+        "udhëzimet_e_markës": {
+          "type": "object",
+          "description": "Dokumenti i zërit të markës së klientit, i injektuar në kohën e konkluzionit. Objekt bosh nëse nuk ka.",
+          "required": ["id_klienti", "emri_i_klientit", "niveli_i_formalitetit"],
+          "properties": {
+            "id_klienti": { "type": "string" },
+            "emri_i_klientit": { "type": "string" },
+            "përshkruesit_e_tonit": { "type": "array", "items": { "type": "string" } },
+            "fraza_të_ndaluara": { "type": "array", "items": { "type": "string" } },
+            "fraza_të_preferuara": { "type": "array", "items": { "type": "string" } },
+            "niveli_i_formalitetit": { "type": "string", "enum": ["formal", "gjysmë-formal", "informal"] },
+            "audienca_e_synuar": { "type": "string" },
+            "preferenca_e_gjatësisë_së_fjalisë": { "type": "string", "enum": ["e_shkurtër", "e_mesme", "e_gjatë", "e_shumëllojshme"] },
+            "kërkohet_veprorja": { "type": "boolean" },
+            "lejohet_veta_e_parë": { "type": "boolean" },
+            "lejohen_pasthirrmat": { "type": "boolean" },
+            "shënime": { "type": "string" }
+          }
+        },
+        "pikat_kryesore": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Pikat kryesore të përmbledhjes origjinale që i janë dhënë shkrimtarit. Varg bosh nëse nuk është dhënë përmbledhje."
+        },
+        "teksti_i_artikullit": {
+          "type": "string",
+          "minLength": 100,
+          "description": "Teksti i plotë i artikullit që do të redaktohet."
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "required": ["gramatika", "stili_i_të_shkruarit", "formatimi", "përputhshmëria_e_markës", "përputhshmëria_e_marketingut", "struktura"],
+      "properties": {
+        "gramatika": { "$ref": "#/definitions/detyrëUdhëzuese" },
+        "stili_i_të_shkruarit": { "$ref": "#/definitions/detyrëStili" },
+        "formatimi": { "$ref": "#/definitions/detyrëUdhëzuese" },
+        "përputhshmëria_e_markës": { "$ref": "#/definitions/detyrëMePikë" },
+        "përputhshmëria_e_marketingut": { "$ref": "#/definitions/detyrëMePikë" },
+        "struktura": { "$ref": "#/definitions/detyrëStrukture" }
+      }
+    }
+  },
+  "definitions": {
+    "problem": {
+      "type": "object",
+      "required": ["vendndodhja", "lloji_i_problemit", "udhëzim", "ashpërsia"],
+      "properties": {
+        "vendndodhja": { "type": "string" },
+        "lloji_i_problemit": { "type": "string" },
+        "udhëzim": { "type": "string" },
+        "ashpërsia": { "type": "string", "enum": ["kritike", "madhore", "e_vogël"] }
+      }
+    },
+    "detyrëUdhëzuese": {
+      "type": "object",
+      "required": ["vendimi", "problemet"],
+      "properties": {
+        "vendimi": { "type": "string", "enum": ["kalon", "nuk_kalon", "i_pjesshëm"] },
+        "problemet": { "type": "array", "items": { "$ref": "#/definitions/problem" } }
+      }
+    },
+    "detyrëStili": {
+      "allOf": [
+        { "$ref": "#/definitions/detyrëUdhëzuese" },
+        {
+          "properties": {
+            "regjistri_i_zbuluar": { "type": "string", "enum": ["editorial", "informativ", "marketingu", "klasik", "i_përzier"] },
+            "regjistri_i_pritshëm": { "type": "string", "enum": ["editorial", "informativ", "marketingu", "klasik", "i_përzier", "i_paspecifikuar"] }
+          }
+        }
+      ]
+    },
+    "detyrëMePikë": {
+      "type": "object",
+      "required": ["pikët", "vendimi", "problemet"],
+      "properties": {
+        "pikët": { "type": "number", "minimum": 0, "maximum": 100 },
+        "vendimi": { "type": "string", "enum": ["kalon", "nuk_kalon", "i_pjesshëm"] },
+        "problemet": { "type": "array", "items": { "$ref": "#/definitions/problem" } }
+      }
+    },
+    "mbulimiIPikaveKryesore": {
+      "type": "object",
+      "required": ["pika_kryesore", "e_mbuluar", "cilësia_e_përpunimit"],
+      "properties": {
+        "pika_kryesore": { "type": "string" },
+        "e_mbuluar": { "type": "boolean" },
+        "cilësia_e_përpunimit": { "type": "string", "enum": ["e_thelluar", "adekuate", "sipërfaqësore", "mungon"] }
+      }
+    },
+    "detyrëStrukture": {
+      "type": "object",
+      "required": ["vendimi", "mbulimi_i_pikave_kryesore", "lloji_i_strukturës_së_zbuluar", "udhëzim"],
+      "properties": {
+        "vendimi": { "type": "string", "enum": ["kalon", "nuk_kalon", "i_pjesshëm", "nuk_u_dha_përmbledhje"] },
+        "mbulimi_i_pikave_kryesore": { "type": "array", "items": { "$ref": "#/definitions/mbulimiIPikaveKryesore" } },
+        "lloji_i_strukturës_së_zbuluar": { "type": "string", "enum": ["lineare", "eksponenciale", "jo-lineare", "e_paqartë"] },
+        "udhëzim": { "type": "string" }
+      }
+    }
+  }
+}
+```
+
+Sigurohu që të gjitha shënimet e problemeve të jenë specifike, të lokalizuara dhe diagnostikisht të dobishme, që nivelet e ashpërsisë të ndryshojnë në mënyrë realiste, që udhëzimet të mos e rishkruajnë kurrë tekstin por vetëm të drejtojnë vëmendjen te lloji dhe vendndodhja e problemit, dhe që vlerësimi të pasqyrojë artikullin e degraduar dhe jo versionin origjinal cilësor, duke mbetur njëkohësisht në përputhje me udhëzimet e ofruara të markës. Më poshtë gjendet artikulli i artë.
+
+Zgjedhjet Presidenciale në "Harry Fultz" Tetori erdhi përsëri. Si çdo vit në "Fultz", edhe kjo vjeshtë kishte në epiqendër zgjedhjet për presidentin e qeverisë së nxënësve. Këshilli i nxënësve është një nga krenaritë e shkollës sonë, pasi paraqet më së miri vlerat dhe virtytet e nxënësve tanë. Çdo vit, zhvillojmë zgjedhje në mënyrë që presidenti i shkollës të zgjidhet drejt dhe me dëshirën e të gjithëve. Për vitin akademik 2025-2026 kandidatët ishin: Adriano Marku, Ardea Hetoja dhe Ejona Kalluçi. Dy kandidatët e parë ishin nxënës të degës elektronikë të vitit të katërt kurse kandidatja e tretë nxënëse e degës gjimnaz i përgjithshëm, vitit i tretë. Këtë vit gara ishte shumë e fortë. Të tre kandidatët kishin shumë për të ofruar. Idetë e tyre ishin shumë të ngjashme me njëri-tjetrin, por në të njëjtën kohë, qasjet e tyre ishin krejt të ndryshme. Fushata zgjedhore filloi ditën e hënë, me datë 5 Tetor. Të tre kandidatët mbajtën fjalim për gjithë nxënësit e viteve të para në sallën e auditorit. Zgjedhjet u mbajtën të mërkurën në datë 8 tetor dhe rezultatet iu përcollën kandidateve po atë ditë. Presidente u zgjodh Ejona Kalluçi dhe zv. President Adriano Marku. Ky vit shënon herën e parë që president i shkollës zgjidhet një nxënës i degës gjimnaz. Ejona Kalluçi, presidentja e qeverisë së nxënësve për këtë vit, në platformën e saj paraqiti ditën e fushatës një sërë idesh të reja. Disa prej tyre i shkëputëm nga fjalimi i saj për gazetën tonë: Përshëndetje të gjithëve, “Të fillosh shkollën e mesme është një gjë e madhe – thotë ajo,- dhe një pjesë e rëndësishme e jetës suaj. Në “Fultz” është e garantuar që do të krijoni vlera. ... Do të doja mbështetjen tuaj, sepse sot këtu nuk jam si një kandidate, por si një shoqe e juaja e shkollës që dua tju përfaqësoj denjësisht. Nëse ju do të keni besim tek unë, unë do të jem këtu për ju në çdo moment që do të keni nevojë. - Dua të sigurohem që ju të ndiheni komod jo vetëm brenda klasës, por në të gjithë shkollën, dhe kjo gjë arrihet vetëm përmes bashkëpunimit. Duke u bashkuar në klube ju do të gjeni veten dhe do të shihni që viti do të kalojë më shpejt dhe do të jetë më i kënaqshëm. - Komunikim më i mirë. Do të punoj me këshillin për të përmirësuar mënyrën se si komunikojmë ndoshta përmes një kalendari. Mendoj që të publikojmë në rrjetet sociale të shkollës një kalendar me gjithë veprimtaritë e planifikuara për muajin. - Idetë tuaja kanë më shumë rëndësi Nëse keni një sugjerim, shqetësim, apo edhe diçka që ju bezdis në lidhje me shkollën, dua ta dëgjoj dhe të bëj diçka për të. Sepse përvoja juaj këtu ka po aq rëndësi sa ajo e kujtdo tjetër. Nuk dua të ngurroni të flisni me senatorin e klasës ose me mua personalisht. Çdo gjë që do t'ju shqetësojë gjatë gjithë vitit, unë do të jem aty për ju. Jo vetëm për shqetësimet që keni por dhe për ide apo dëshira. Nuk premtoj se do të rregulloj çdo gjë. Por premtoj këtë: Do të jem aty, do të dëgjoj dhe do të përpiqem, çdo herë, qoftë diçka e madhe si organizimi i një veprimtarie me të gjithë shkollën, apo diçka e vogël në lidhje mbase me klubet e shkollës. Nëse ka rëndësi për ju, ka rëndësi edhe për mua. - Ju inkurajoj të bashkëpunoni me nxënësit e degëve të tjera. Mënyra më e mirë për ta bërë këtë është nëse rikthejmë një shpirt të përbashkët në shkollë dhe sillemi sikur nuk jemi në degë të ndryshme. Çdo degë ka talente dhe nxjerr specialistë të fushave të ndryshme, dhe bashkëpunimi midis nesh do ishte perfekt. - Do të pikasim dhe inkurajoj çdo nxënës. Nuk ka nevojë të jesh ekselent në mësime që të vlerësohesh këtu. Mjafton të kesh një talent. Unë kam marrë përsipër që çdo muaj të bisedoj personalisht me mësuesit e departamenteve të ndryshme dhe të pikasim nxënësit më të mirë të periudhave në lëndë të ndryshme. Këtë do ta bëjmë në një rubrikë të re që do të shtojmë në gazetën e shkollës. - Veprimtaritë jashtëshkollore. Ato që i pëlqejnë më shumë nxënësve janë festat. Nuk do të bëj premtime që nuk do t'i mbaj në fund, pasi organizimi i këtyre festave është një përgjegjësi shumë e madhe, por do të mundohemi sa më shumë që të bëjmë një ballo fundviti të bukur dhe mbase dhe një festë gjatë vitit. - Së fundmi, këshillimi i karrierës dhe vendimmarrja. Drejtimi që merrni këtu, për ata që kanë zgjedhur arsimin profesional, është një drejtim që do ta mbani gjatë gjithë jetës. A jeni të sigurt se këtë rrugëtim doni të vazhdoni? A i dini mundësitë e arsimit të lartë dhë mundësitë e punësimit që ju presin? Dua të jeni të mirë-informuar mbi të ardhmen tuaj dhe të jepni maksimumin tuaj në shkollën e mesme. Prandaj, fokusi im kryesor do të jetë këshillimi i karrierës. Do të organizoj mbledhje, takime me ALUMNI, vizita në panaire të universiteteve, takime informuese mbi degët dhe mundësitë e punësimit. Këtë do ta bëj për nxënësit e çdo dege të “Fultz”- it. Mund të ftojmë profesorë, përfaqësues nga UT, mjekë, inxhinierë dhe përfaqësues nga kompani të ndryshme. Për ta mbyllur, shpresoj të kem qenë sa më e qartë. Megjithatë, kushdo nga 3 kandidatët të fitojë, jam e sigurt që ky vit shkollor do të jetë shumë produktiv dhe i frytshëm. Ju uroj suksese kandidatëve të tjerë! Suksese dhe juve në vitin tuaj të parë të gjimnazit dhe në vitet në vazhdim. Dhe mos harroni, çdo gjë që ka rëndësi për ju, ka rëndësi edhe për mua.” Suksese senatit të “Harry Fultz” për vitin akademik 2025-2026!

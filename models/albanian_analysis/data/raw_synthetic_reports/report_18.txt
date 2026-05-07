@@ -1,0 +1,162 @@
+Të është dhënë një artikull cilësor në gjuhën shqipe që respekton *Drejtshkrimin e Gjuhës Shqipe* dhe pasqyron një zë të qëndrueshëm të markës, të përcaktuar në JSON-in e udhëzimeve të markës; detyra jote është që fillimisht ta transformosh në mënyrë të brendshme këtë “artikull të artë” në një version të degraduar në mënyrë delikate duke futur gabime të kontrolluara dhe realiste në disa dimensione, dhe më pas të gjenerosh një JSON të strukturuar vlerësimi që pasqyron këto degradime sipas skemës së ofruar AlbanianEditorTrainingExample. Degradimi duhet të jetë natyral dhe i larmishëm, duke përfshirë, por pa u kufizuar në, gabime drejtshkrimore, mospërputhje gramatikore, keqpërdorim të standardeve leksikore të shqipes si përdorimi i panevojshëm i huazimeve (p.sh., përdorimi i “aktivitet” në vend të “veprimtari”), dobësi strukturore (p.sh., rrjedhë logjike e ndërprerë, kalime të dobëta ose progresion i paqartë), shtjellim të pabarabartë ose të pamjaftueshëm të pikave kryesore, si dhe probleme stili në të shkruar si përdorimi i tepërt i formës pësore, mospërputhje toni ose prania e sarkazmës apo ironisë delikate që bie ndesh me përshkruesit e synuar të tonit në udhëzimet e markës; gjithashtu, fut devijime të rastësishme nga kufizimet e markës si niveli i formalitetit, formulimet e preferuara, pritshmëritë për gjatësinë e fjalive ose zëri narrativ (p.sh., përdorim i paqëllimshëm i vetës së parë nëse nuk lejohet). Artikulli i modifikuar duhet të mbetet koherent dhe i besueshëm, jo i korruptuar artificialisht. Nuk duhet të shfaqësh artikullin e korrigjuar apo origjinal — përfshi vetëm versionin e degraduar brenda fushës `input.teksti_i_artikullit`. Më pas prodho JSON-in përfundimtar duke ndjekur rreptësisht këtë skemë:
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ShembullTrajnimiRedaktuesShqip",
+  "version": "2.0.0",
+  "description": "Skemë kanonike për të gjithë shembujt e trajnimit. Mos modifikoni pa rritur versionin.",
+  "type": "object",
+  "required": ["id", "metadata", "input", "output"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^alb-[a-z]+-[0-9]{4}$",
+      "description": "Identifikues unik për shembullin e trajnimit."
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["regjistri", "shënuesi", "i_pranueshëm_për_rlhf", "version"],
+      "properties": {
+        "regjistri": {
+          "type": "string",
+          "enum": ["editorial", "informativ", "marketingu", "klasik", "i_përzier"],
+          "description": "Regjistri gjuhësor i artikullit burimor."
+        },
+        "shënuesi": {
+          "type": "string",
+          "enum": ["njeri", "sintetik", "njeri_korrigjoi_sintetik"],
+          "description": "Burimi i shënimeve të trajnimit."
+        },
+        "i_pranueshëm_për_rlhf": {
+          "type": "boolean",
+          "description": "Nëse shembulli plotëson standardet e cilësisë për trajnimin RLHF."
+        },
+        "version": {
+          "type": "string",
+          "description": "Versioni i skemës së përdorur për këtë shembull."
+        },
+        "recensuesi": {
+          "type": "string",
+          "description": "Identifikuesi i personit që rishikoi shembullin."
+        },
+        "rishikuar_më": {
+          "type": "string",
+          "format": "date",
+          "description": "Data kur u rishikua shembulli."
+        }
+      }
+    },
+    "input": {
+      "type": "object",
+      "required": ["teksti_i_artikullit"],
+      "properties": {
+        "udhëzimet_e_markës": {
+          "type": "object",
+          "description": "Dokumenti i zërit të markës së klientit, i injektuar në kohën e konkluzionit. Objekt bosh nëse nuk ka.",
+          "required": ["id_klienti", "emri_i_klientit", "niveli_i_formalitetit"],
+          "properties": {
+            "id_klienti": { "type": "string" },
+            "emri_i_klientit": { "type": "string" },
+            "përshkruesit_e_tonit": { "type": "array", "items": { "type": "string" } },
+            "fraza_të_ndaluara": { "type": "array", "items": { "type": "string" } },
+            "fraza_të_preferuara": { "type": "array", "items": { "type": "string" } },
+            "niveli_i_formalitetit": { "type": "string", "enum": ["formal", "gjysmë-formal", "informal"] },
+            "audienca_e_synuar": { "type": "string" },
+            "preferenca_e_gjatësisë_së_fjalisë": { "type": "string", "enum": ["e_shkurtër", "e_mesme", "e_gjatë", "e_shumëllojshme"] },
+            "kërkohet_veprorja": { "type": "boolean" },
+            "lejohet_veta_e_parë": { "type": "boolean" },
+            "lejohen_pasthirrmat": { "type": "boolean" },
+            "shënime": { "type": "string" }
+          }
+        },
+        "pikat_kryesore": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Pikat kryesore të përmbledhjes origjinale që i janë dhënë shkrimtarit. Varg bosh nëse nuk është dhënë përmbledhje."
+        },
+        "teksti_i_artikullit": {
+          "type": "string",
+          "minLength": 100,
+          "description": "Teksti i plotë i artikullit që do të redaktohet."
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "required": ["gramatika", "stili_i_të_shkruarit", "formatimi", "përputhshmëria_e_markës", "përputhshmëria_e_marketingut", "struktura"],
+      "properties": {
+        "gramatika": { "$ref": "#/definitions/detyrëUdhëzuese" },
+        "stili_i_të_shkruarit": { "$ref": "#/definitions/detyrëStili" },
+        "formatimi": { "$ref": "#/definitions/detyrëUdhëzuese" },
+        "përputhshmëria_e_markës": { "$ref": "#/definitions/detyrëMePikë" },
+        "përputhshmëria_e_marketingut": { "$ref": "#/definitions/detyrëMePikë" },
+        "struktura": { "$ref": "#/definitions/detyrëStrukture" }
+      }
+    }
+  },
+  "definitions": {
+    "problem": {
+      "type": "object",
+      "required": ["vendndodhja", "lloji_i_problemit", "udhëzim", "ashpërsia"],
+      "properties": {
+        "vendndodhja": { "type": "string" },
+        "lloji_i_problemit": { "type": "string" },
+        "udhëzim": { "type": "string" },
+        "ashpërsia": { "type": "string", "enum": ["kritike", "madhore", "e_vogël"] }
+      }
+    },
+    "detyrëUdhëzuese": {
+      "type": "object",
+      "required": ["vendimi", "problemet"],
+      "properties": {
+        "vendimi": { "type": "string", "enum": ["kalon", "nuk_kalon", "i_pjesshëm"] },
+        "problemet": { "type": "array", "items": { "$ref": "#/definitions/problem" } }
+      }
+    },
+    "detyrëStili": {
+      "allOf": [
+        { "$ref": "#/definitions/detyrëUdhëzuese" },
+        {
+          "properties": {
+            "regjistri_i_zbuluar": { "type": "string", "enum": ["editorial", "informativ", "marketingu", "klasik", "i_përzier"] },
+            "regjistri_i_pritshëm": { "type": "string", "enum": ["editorial", "informativ", "marketingu", "klasik", "i_përzier", "i_paspecifikuar"] }
+          }
+        }
+      ]
+    },
+    "detyrëMePikë": {
+      "type": "object",
+      "required": ["pikët", "vendimi", "problemet"],
+      "properties": {
+        "pikët": { "type": "number", "minimum": 0, "maximum": 100 },
+        "vendimi": { "type": "string", "enum": ["kalon", "nuk_kalon", "i_pjesshëm"] },
+        "problemet": { "type": "array", "items": { "$ref": "#/definitions/problem" } }
+      }
+    },
+    "mbulimiIPikaveKryesore": {
+      "type": "object",
+      "required": ["pika_kryesore", "e_mbuluar", "cilësia_e_përpunimit"],
+      "properties": {
+        "pika_kryesore": { "type": "string" },
+        "e_mbuluar": { "type": "boolean" },
+        "cilësia_e_përpunimit": { "type": "string", "enum": ["e_thelluar", "adekuate", "sipërfaqësore", "mungon"] }
+      }
+    },
+    "detyrëStrukture": {
+      "type": "object",
+      "required": ["vendimi", "mbulimi_i_pikave_kryesore", "lloji_i_strukturës_së_zbuluar", "udhëzim"],
+      "properties": {
+        "vendimi": { "type": "string", "enum": ["kalon", "nuk_kalon", "i_pjesshëm", "nuk_u_dha_përmbledhje"] },
+        "mbulimi_i_pikave_kryesore": { "type": "array", "items": { "$ref": "#/definitions/mbulimiIPikaveKryesore" } },
+        "lloji_i_strukturës_së_zbuluar": { "type": "string", "enum": ["lineare", "eksponenciale", "jo-lineare", "e_paqartë"] },
+        "udhëzim": { "type": "string" }
+      }
+    }
+  }
+}
+```
+
+Sigurohu që të gjitha shënimet e problemeve të jenë specifike, të lokalizuara dhe diagnostikisht të dobishme, që nivelet e ashpërsisë të ndryshojnë në mënyrë realiste, që udhëzimet të mos e rishkruajnë kurrë tekstin por vetëm të drejtojnë vëmendjen te lloji dhe vendndodhja e problemit, dhe që vlerësimi të pasqyrojë artikullin e degraduar dhe jo versionin origjinal cilësor, duke mbetur njëkohësisht në përputhje me udhëzimet e ofruara të markës. Më poshtë gjendet artikulli i artë.
+
+Klubet e "Harry Fultz" Një pjesë shumë e rëndësishme e shkollës sonë janë klubet, ku çdo nxënës gjen mundësinë të zhvillojë ose të shpalosë talentet e tij. Ato fillojnë të organizohen zakonisht një deri në dy muaj pas fillimit të vitit shkollor dhe funksionojnë përgjatë të gjithë vitit. Nxënësit mund të informohen rreth klubeve nga mësuesit përkatës që i drejtojnë ato, mund të spikaten prej tyre për aftësitë që tregojnë në fushën përkatëse, ose mund të interesohen vetë për klube specifike dhe të kërkojnë të bëhen pjesë e tyre. Secili klub organizon evente të ndryshme dhe takime të shpeshta, që shtrihen në hapësirën kohore përgjatë muajve pas hapjes së klubit. Veprimtaria më e fundit ishte ajo e Klubit të Historisë, i cili organizoi një vizitë në Shtëpinë e Gjetheve më 17 tetor. Dashamirësit e historisë patën mundësinë të eksploronin dhomat e ndryshme të kësaj ndërtese historike dhe të mësonin domethënien e secilës prej tyre. Një klub tjetër shumë i njohur është Klubi i Debatit, ku nxënësit zhvillojnë aftësitë e tyre të arsyetimit dhe të të folurit në publik. Kur afrohet konkursi i përvitshëm, ata përballen me nxënës të shkollave të tjera të Shqipërisë, si edhe zhvillojnë veprimtari jashtë saj. Instituti "Harry Fultz" ka një nga klubet më të zhvilluara dhe të arrira të debatit, duke fituar çmime të shumta ndër vite, jo vetëm në Shqipëri por edhe jashtë saj. Nëse debati nuk është për ju dhe ëndërroni ta zotëroni skenën e ta rrëmbeni publikun në një mënyrë më krijuese, atëherë Klubi i Teatrit është ideal për ju! Shfaqja e teatrit në "Harry Fultz" është një event i shumëpritur, në të cilin kurrë nuk mungojnë historitë tërheqëse dhe nxënësit që i sjellin personazhet në jetë duke i dhënë jo vetëm fjalë por edhe jetë, dhe sigurisht, nuk mungon kurrë publiku, e cila e ndjek produktin mbreslënës të punës së tyre me kënaqësinë më të madhe. Klubet e historisë, debatit dhe teatrit nuk janë të vetmit në departamentin e lëndëve shoqërore. Atyre u bashkohen edhe Klubi i Gjeografisë, Klubi i Gjermanishtes, si edhe Klubi i Leximit “Miqtë e Librit”, ku trajtohet ajka e letërsisë nga nxënësit e apasionuar pas saj. Nuk mund të harrojmë as klubet e shkencave, si ai i Fizikës dhe Klubi i Kimisë. Në këtë të fundit, nxënësit mësojnë si të krijojnë reaksione kimike, cilat janë mjetet e nevojshme për përzierjen e substancave dhe çfarë produktesh përftohen. Klubi i Kimisë është ideal për ata që ëndërrojnë të punojnë në laboratorë në një të ardhme të afërt. Po ashtu, klubi i ekologjisë është i përsosur për dashamirësit e shkencave natyrore dhe mjedisit. Aty ku bashkohet kreativiteti me shkencën gjendet dhe klubi i matematikës, i cili së fundmi është duke krijuar një libër komik që i vesh historive fantastike rregullat dhe ligjet e matematikës në një udhëtim që jemi të lumtur ta ndjekim. Nëse klubet dëshironi t’i frekuentoni për t’u shkëputur pak nga mësimet, mund t’i bashkoheni klubeve sporteve, si ai i basketbollit, futbollit dhe volejbollit. Çdo vit, këto klube zhvillojnë ndeshje të ndryshme me shkolla të Tiranës, duke nxitur shpirtin e skuadrës dhe të sportit. Stërvitja mendore është po aq e rëndësishme sa ajo fizike. Pikërisht këtu hyn në lojë Klubi i Shahut, i cili çdo vit organizon një veprimtari ku nxënës nga të gjitha vitet kanë mundësinë të konkurrojnë me njëri-tjetrin për vendin fitues, duke shfaqur aftësitë e tyre strategjike. Nuk mund të përmendim Institutin "Harry Fultz" pa përmendur edhe klubet profesionale, si Klubi i Automekanikës, Klubi i Biznesit dhe klubet e elektronikës, robotikës, IT-së e kodimit dhe telekomunikacionit, ku nxënësit zhvillojnë aftësitë e tyre teknologjike. Në klubin e robotikës bashkëpunimi mes brezave është thelbësor. Vitet e treta shërbejnë si udhërrëfyes për vitet e dyta, duke i mësuar atyre hapat e nevojshëm për krijimin e një projekti. Ata ndahen në grupe sipas fushës së tyre: Dizenjuesit, Programuesit dhe Teknikët. Para se të nisin ndërtimet, nxënësit kryejnë një hulumtim të detajuar mbi mënyrën e realizimit të projektit dhe përcaktojnë materialet që do t’u nevojiten gjatë procesit. Gjatë gjithë kësaj kohe, vitet e treta luajnë rolin e trajnerëve, duke i udhëzuar dhe ndihmuar nxënësit e vitit të dytë të fitojnë përvojë praktike dhe të përvetësojnë punën në grup për të kryer projekte. Çdo vit i tretë ka nën mbikëqyrje një vit të dytë, duke siguruar që bashkëpunimi të jetë sa më efektiv. Së fundmi, vjen Klubi i Multimedias, i cili shoqëron çdo veprimtari që ndodh gjatë gjithë vitit shkollor, duke dokumentuar momentet më të rëndësishme dhe duke ruajtur kujtimet më të bukura të shkollës. Pra, nëse pasditet tuaja janë bosh, ose nëse dëshironi të provoni diçka të re, ku mund të zhvilloni aftësi të reja dhe të zgjeroni rrethin tuaj shoqëror, klubet janë vendi ideal për të filluar!
